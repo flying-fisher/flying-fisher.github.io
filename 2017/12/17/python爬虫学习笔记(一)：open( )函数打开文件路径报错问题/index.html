@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/12/17/python爬虫学习笔记(一)：open( )函数打开文件路径报错问题/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="python爬虫学习笔记(一)：open（）函数打开文件路径报错要以读文件的模式打开一个文件对象，使用Python内置的open()函数，传入文件名和标示符，标示符’r’表示读。1file = open(&apos;e:\scrapy_data\1.html&apos;,&apos;wb&apos;) 对于初学python者，open（）函数很容易报错，并且不易被发现123456789fhandle = open(&quot;E:\scrapy_">
-<meta property="og:updated_time" content="2017-12-17T13:07:57.878Z">
+<meta property="og:updated_time" content="2017-12-17T13:12:20.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 <meta name="twitter:description" content="python爬虫学习笔记(一)：open（）函数打开文件路径报错要以读文件的模式打开一个文件对象，使用Python内置的open()函数，传入文件名和标示符，标示符’r’表示读。1file = open(&apos;e:\scrapy_data\1.html&apos;,&apos;wb&apos;) 对于初学python者，open（）函数很容易报错，并且不易被发现123456789fhandle = open(&quot;E:\scrapy_">
@@ -78,10 +78,11 @@
         <h1 id="python爬虫学习笔记-一-：open（）函数打开文件路径报错"><a href="#python爬虫学习笔记-一-：open（）函数打开文件路径报错" class="headerlink" title="python爬虫学习笔记(一)：open（）函数打开文件路径报错"></a><center>python爬虫学习笔记(一)：open（）函数打开文件路径报错<center></center></center></h1><h2 id="要以读文件的模式打开一个文件对象，使用Python内置的open-函数，传入文件名和标示符，标示符’r’表示读。"><a href="#要以读文件的模式打开一个文件对象，使用Python内置的open-函数，传入文件名和标示符，标示符’r’表示读。" class="headerlink" title="要以读文件的模式打开一个文件对象，使用Python内置的open()函数，传入文件名和标示符，标示符’r’表示读。"></a>要以读文件的模式打开一个文件对象，使用Python内置的open()函数，传入文件名和标示符，标示符’r’表示读。</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file = open(<span class="string">'e:\scrapy_data\1.html'</span>,<span class="string">'wb'</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="对于初学python者，open（）函数很容易报错，并且不易被发现"><a href="#对于初学python者，open（）函数很容易报错，并且不易被发现" class="headerlink" title="对于初学python者，open（）函数很容易报错，并且不易被发现"></a>对于初学python者，open（）函数很容易报错，并且不易被发现</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fhandle = open(<span class="string">"E:\scrapy_data\1.html"</span>,<span class="string">"wb"</span>)</span><br><span class="line">fhandle.write(data)</span><br><span class="line"></span><br><span class="line">OSError                                   Traceback (most recent call last)</span><br><span class="line">&lt;ipython-input<span class="number">-24</span>-cb34cdc3c531&gt; <span class="keyword">in</span> &lt;module&gt;()</span><br><span class="line">----&gt; 1 fhandle = open("E:\scrapy_data\1.html","wb")</span><br><span class="line">      <span class="number">2</span> fhandle.write(data)</span><br><span class="line"></span><br><span class="line">OSError: [Errno <span class="number">22</span>] Invalid argument: <span class="string">'E:\\scrapy_data\x01.html'</span></span><br></pre></td></tr></table></figure>
 <p>看着跟教程一模一样！只有斜杠的方向不一样，这里跟平常见得斜杠语法不一样，python语言里有一个转义字符的概念，需要在字符中使用特殊字符时，python用反斜杠’\’转义字符，所以错误案例中的’\’被用作转义，导致解释器解释文件路径错误。</p>
-<p>改正的方法有两种：<br>    第一、将’\’的方向反向为’/’，即文首正确的写法；第二、在含有转义符的字符串前加‘r’表示字符串内按原始含义解释，不做转义处理。（推荐！）</p>
+<ul>
+<li>改正的方法有两种：<br>   第一、将’\’的方向反向为’/’，即文首正确的写法；<br>   第二、在含有转义符的字符串前加‘r’表示字符串内按原始含义解释，不做转义处理。（推荐！）</li>
+</ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file = open(<span class="string">r"e:\scrapy_data\1.html"</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="转义字符表"><a href="#转义字符表" class="headerlink" title="转义字符表"></a>转义字符表</h1><p><center><table><br>    <tr><br>        <td>转义字符</td><br>        <td>描述</td><br>    </tr><br>    <tr><br>        <td>(在行尾时)</td><br>        <td>续行符</td><br>    </tr><br>    <tr><br>        <td>\</td><br>        <td>反斜杠符号</td><br>    </tr><br>    <tr><br>        <td>\’</td><br>        <td>单引号</td><br>    </tr><br>    <tr><br>        <td>\”</td><br>        <td>双引号</td><br>    </tr><br>    <tr><br>        <td>\n</td><br>        <td>换行</td><br>    </tr><br>    <tr><br>        <td>\t</td><br>        <td>横向制表符</td><br>    </tr><br>    <tr><br>        <td>\v</td><br>        <td>纵向制表符</td><br>    </tr><br>    <tr><br>        <td>\r</td><br>        <td>回车</td><br>    </tr><br>    <tr><br>        <td>\f</td><br>        <td><br>换页</td><br>    </tr><br>    <tr><br>        <td>\oyy</td><br>        <td>八进制数，yy代表的字符，例如：\o12代表换行</td><br>    </tr><br></table></center></p>
-<center>
+<h1 id="转义字符表"><a href="#转义字符表" class="headerlink" title="转义字符表"></a>转义字符表</h1><center><table><br>    <tr><br>        <td>转义字符</td><br>        <td>描述</td><br>    </tr><br>    <tr><br>        <td>(在行尾时)</td><br>        <td>续行符</td><br>    </tr><br>    <tr><br>        <td>\</td><br>        <td>反斜杠符号</td><br>    </tr><br>    <tr><br>        <td>\’</td><br>        <td>单引号</td><br>    </tr><br>    <tr><br>        <td>\”</td><br>        <td>双引号</td><br>    </tr><br>    <tr><br>        <td>\n</td><br>        <td>换行</td><br>    </tr><br>    <tr><br>        <td>\t</td><br>        <td>横向制表符</td><br>    </tr><br>    <tr><br>        <td>\v</td><br>        <td>纵向制表符</td><br>    </tr><br>    <tr><br>        <td>\r</td><br>        <td>回车</td><br>    </tr><br>    <tr><br>        <td>\f</td><br>        <td><br>换页</td><br>    </tr><br>    <tr><br>        <td>\oyy</td><br>        <td>八进制数，yy代表的字符，例如：\o12代表换行</td><br>    </tr><br></table><br></center>
 
 
 <h1 id="open-函数标识符表"><a href="#open-函数标识符表" class="headerlink" title="open()函数标识符表"></a>open()函数标识符表</h1><ul>
@@ -98,11 +99,11 @@
 <li>a+ 打开一个文件用于读写。如果该文件已存在，文件指针将会放在文件的结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。</li>
 <li>ab+ 以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。</li>
 </ul>
-</center>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/12/17/python爬虫学习笔记(一)：open( )函数打开文件路径报错问题/" data-id="cjbasee6800027cu5nacbmion" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2017/12/17/python爬虫学习笔记(一)：open( )函数打开文件路径报错问题/" data-id="cjbask2o10002bwu53e40yc3t" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -123,7 +124,7 @@
   
     <a href="/2017/12/15/Markdown/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Älter</strong>
-      <div class="article-nav-title">&lt;center&gt;Markdown&lt;center&gt;</div>
+      <div class="article-nav-title">Markdown</div>
     </a>
   
 </nav>
@@ -172,7 +173,7 @@
           </li>
         
           <li>
-            <a href="/2017/12/15/Markdown/">&lt;center&gt;Markdown&lt;center&gt;</a>
+            <a href="/2017/12/15/Markdown/">Markdown</a>
           </li>
         
           <li>
