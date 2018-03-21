@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="requests模块的学习使用事前-pip install requests 发送get,post请求，获取响应 response = requests.get(url) #发送get请求，请求url地址对应的响应 response = requests.post(url,data={请求体的字典}) #发送post请求  response 的方法 response.text 容易出现乱码，修改方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/03/21/第二部分/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="requests模块的学习使用事前-pip install requests 发送get,post请求，获取响应 response = requests.get(url) #发送get请求，请求url地址对应的响应 response = requests.post(url,data={请求体的字典}) #发送post请求  response 的方法 response.text 容易出现乱码，修改方">
+<meta property="og:updated_time" content="2018-03-19T11:35:45.056Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="requests模块的学习使用事前-pip install requests 发送get,post请求，获取响应 response = requests.get(url) #发送get请求，请求url地址对应的响应 response = requests.post(url,data={请求体的字典}) #发送post请求  response 的方法 response.text 容易出现乱码，修改方">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-第二部分" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/21/第二部分/" class="article-date">
+  <time datetime="2018-03-21T12:15:35.219Z" itemprop="datePublished">2018-03-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="requests模块的学习"><a href="#requests模块的学习" class="headerlink" title="requests模块的学习"></a>requests模块的学习</h1><h2 id="使用事前"><a href="#使用事前" class="headerlink" title="使用事前"></a>使用事前</h2><pre><code>-pip install requests
+</code></pre><h2 id="发送get-post请求，获取响应"><a href="#发送get-post请求，获取响应" class="headerlink" title="发送get,post请求，获取响应"></a>发送get,post请求，获取响应</h2><ul>
+<li>response = requests.get(url) #发送get请求，请求url地址对应的响应</li>
+<li>response = requests.post(url,data={请求体的字典}) #发送post请求</li>
+</ul>
+<h3 id="response-的方法"><a href="#response-的方法" class="headerlink" title="response 的方法"></a>response 的方法</h3><ul>
+<li>response.text<ul>
+<li>容易出现乱码，修改方式是前面加上response.encoding = ‘utf-8’</li>
+</ul>
+</li>
+<li>response.content.decode()<ul>
+<li>把响应的二进制字节流转化为str类型</li>
+</ul>
+</li>
+<li>response.request.url  #发送请求的url地址</li>
+<li>response.url  #response响应的url地址</li>
+<li>response.request.headers  # 请求头</li>
+<li>response.headers  #响应请求</li>
+</ul>
+<h3 id="获取网页源码的正确打开方式-通过下面三种方式一定可以获得相应的网页请求"><a href="#获取网页源码的正确打开方式-通过下面三种方式一定可以获得相应的网页请求" class="headerlink" title="获取网页源码的正确打开方式(通过下面三种方式一定可以获得相应的网页请求)"></a>获取网页源码的正确打开方式(通过下面三种方式一定可以获得相应的网页请求)</h3><ul>
+<li>1.response.content.decode()</li>
+<li>2.response.content.decode(‘gbk’)</li>
+<li>3.response.text</li>
+</ul>
+<h2 id="发送带Header的请求-字典形式"><a href="#发送带Header的请求-字典形式" class="headerlink" title="发送带Header的请求(字典形式)"></a>发送带Header的请求(字典形式)</h2><ul>
+<li>为了模拟浏览器，获取和浏览器一模一样的内容</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">headers = &#123;<span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'</span> &#125;</span><br><span class="line"></span><br><span class="line">response = requests.get(url,headers = headers)</span><br></pre></td></tr></table></figure>
+<h2 id="使用超时参数"><a href="#使用超时参数" class="headerlink" title="使用超时参数"></a>使用超时参数</h2><ul>
+<li>response = requests.get(url,headers = headers,timeout=3)  #3秒内必须返回响应，否则会报错</li>
+</ul>
+<h3 id="retrying模块学习"><a href="#retrying模块学习" class="headerlink" title="retrying模块学习"></a>retrying模块学习</h3><ul>
+<li>pip install retrying</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> retrying <span class="keyword">import</span> retry</span><br><span class="line"></span><br><span class="line"><span class="meta">@retry(stop_max_attempt_number = 3) #让被装饰的函数反复执行三次，三次全部报错才会报错，中间又一次正常，就可以正常进行</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func1"</span>)</span><br><span class="line">    <span class="keyword">raise</span> ValueError(<span class="string">"this is test error"</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="处理cookie相关的请求"><a href="#处理cookie相关的请求" class="headerlink" title="处理cookie相关的请求"></a>处理cookie相关的请求</h2><ul>
+<li>人人网{“email”:”mr_mao_hacker@163.com”,<br>  “password”:”alarmchime”}</li>
+<li><p>直接携带cookie请求url地址</p>
+<ul>
+<li><p>1.cookie放在headers中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">headers = &#123;<span class="string">"User-Agent"</span>:<span class="string">"......"</span>,<span class="string">"Cookie"</span>:<span class="string">"cookie 字符串"</span>&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.cookie字典传给cookies参数</p>
+<ul>
+<li>requests.get(url,cookie=cookie_dict)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>先发送post请求，获取cookie，带上cookie请求登录后的页面<ul>
+<li>1.session = requests.session() #session具有的方法和requests一样</li>
+<li>2.session.post(url,data,headers) # 服务器设置在本地的cookie会保存在session</li>
+<li>3.session.get(url) # 会带上之前保存在session中的cookie，能够请求成功</li>
+</ul>
+</li>
+</ul>
+<h1 id="字典推倒式"><a href="#字典推倒式" class="headerlink" title="字典推倒式"></a>字典推倒式</h1><ul>
+<li>可以把字符串转化为字典形式  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cookie = <span class="string">"BIDUPSID=D7F0CDF633A0261AC63033983555E4B8; PSTM=1502592197; BAIDUID=688900B6A843179BB4682296FC040DCC:FG=1; BDUSS=B3azBtSjg4VjNHajZsc3h6R01mfmwyaTZ2Ty1HaWhWWS1Ba1lnRGNGZjhsTTlaSUFBQUFBJCQAAAAAAAAAAAEAAABReqJYt9bJ7cr1MjAxNgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwHqFn8B6hZej; H_PS_PSSID=1439_21109_17001_22159; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BD_CK_SAM=1; PSINO=2; BDRCVFR[feWj1Vr5u3D]=mk3SLVN4HKm; BD_UPN=14314654; WWW_ST=1521449610205"</span></span><br><span class="line">cookie_dict = &#123;i.split(<span class="string">"="</span>)[<span class="number">0</span>]:i.split(<span class="string">"="</span>)[<span class="number">-1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> cookie.split(<span class="string">"; "</span>)&#125;</span><br><span class="line">print(cookie_dict)</span><br><span class="line">response = requests.get(url,headers = headers,cookies=cookie_dict)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"renren2.html"</span>,<span class="string">"w"</span>,encoding = <span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(response.content.decode())</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/21/第二部分/" data-id="cjf11ziri00047gu5r3bgw6a1" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/21/第一部分/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/21/爬虫学习/第二部分/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/21/第三部分/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/21/第一部分/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/21/第二部分/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/21/爬虫学习/第二部分/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/21/爬虫学习/第三部分/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
