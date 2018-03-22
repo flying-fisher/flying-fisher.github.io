@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="requests;retrying," />
 
 
 
@@ -80,14 +80,15 @@
 
 
 <meta name="description" content="requests模块的学习使用事前-pip install requests 发送get,post请求，获取响应 response = requests.get(url) #发送get请求，请求url地址对应的响应 response = requests.post(url,data={请求体的字典}) #发送post请求  response 的方法 response.text 容易出现乱码，修改方">
+<meta name="keywords" content="requests;retrying">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flying-fisher">
-<meta property="og:url" content="http://yoursite.com/2018/03/21/第二部分/index.html">
+<meta property="og:title" content="第二部分：requests模块学习">
+<meta property="og:url" content="http://yoursite.com/2018/03/21/python爬虫学习/第二部分/index.html">
 <meta property="og:site_name" content="flying-fisher">
 <meta property="og:description" content="requests模块的学习使用事前-pip install requests 发送get,post请求，获取响应 response = requests.get(url) #发送get请求，请求url地址对应的响应 response = requests.post(url,data={请求体的字典}) #发送post请求  response 的方法 response.text 容易出现乱码，修改方">
-<meta property="og:updated_time" content="2018-03-19T11:35:45.056Z">
+<meta property="og:updated_time" content="2018-03-22T06:36:32.533Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="flying-fisher">
+<meta name="twitter:title" content="第二部分：requests模块学习">
 <meta name="twitter:description" content="requests模块的学习使用事前-pip install requests 发送get,post请求，获取响应 response = requests.get(url) #发送get请求，请求url地址对应的响应 response = requests.post(url,data={请求体的字典}) #发送post请求  response 的方法 response.text 容易出现乱码，修改方">
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/21/第二部分/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/21/python爬虫学习/第二部分/"/>
 
 
 
 
 
-  <title> | flying-fisher</title>
+  <title>第二部分：requests模块学习 | flying-fisher</title>
   
 
 
@@ -231,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/第二部分/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/python爬虫学习/第二部分/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cuijunlei">
@@ -248,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">第二部分：requests模块学习</h1>
         
 
         <div class="post-meta">
@@ -354,7 +355,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="字典推倒式"><a href="#字典推倒式" class="headerlink" title="字典推倒式"></a>字典推倒式</h1><ul>
+<h1 id="字典推导式"><a href="#字典推导式" class="headerlink" title="字典推导式"></a>字典推导式</h1><ul>
 <li>可以把字符串转化为字典形式  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cookie = <span class="string">"BIDUPSID=D7F0CDF633A0261AC63033983555E4B8; PSTM=1502592197; BAIDUID=688900B6A843179BB4682296FC040DCC:FG=1; BDUSS=B3azBtSjg4VjNHajZsc3h6R01mfmwyaTZ2Ty1HaWhWWS1Ba1lnRGNGZjhsTTlaSUFBQUFBJCQAAAAAAAAAAAEAAABReqJYt9bJ7cr1MjAxNgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwHqFn8B6hZej; H_PS_PSSID=1439_21109_17001_22159; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BD_CK_SAM=1; PSINO=2; BDRCVFR[feWj1Vr5u3D]=mk3SLVN4HKm; BD_UPN=14314654; WWW_ST=1521449610205"</span></span><br><span class="line">cookie_dict = &#123;i.split(<span class="string">"="</span>)[<span class="number">0</span>]:i.split(<span class="string">"="</span>)[<span class="number">-1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> cookie.split(<span class="string">"; "</span>)&#125;</span><br><span class="line">print(cookie_dict)</span><br><span class="line">response = requests.get(url,headers = headers,cookies=cookie_dict)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"renren2.html"</span>,<span class="string">"w"</span>,encoding = <span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(response.content.decode())</span><br></pre></td></tr></table></figure></li>
 </ul>
 
@@ -372,6 +373,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/requests-retrying/" rel="tag"># requests;retrying</a>
+          
+        </div>
+      
 
       
       
@@ -381,8 +388,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/17/python爬虫笔记（二）：利用模拟浏览器爬取网页/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2017/12/17/爬虫笔记/python爬虫笔记（二）：利用模拟浏览器爬取网页/" rel="next" title="浏览器的模拟--Header属性">
+                <i class="fa fa-chevron-left"></i> 浏览器的模拟--Header属性
               </a>
             
           </div>
@@ -391,8 +398,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/21/第一部分/" rel="prev" title="第一部分">
-                第一部分 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/21/python爬虫学习/第一部分/" rel="prev" title="第一部分：爬虫概念，工具和HTTP">
+                第一部分：爬虫概念，工具和HTTP <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -470,7 +477,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -478,6 +485,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
@@ -507,7 +523,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#requests模块的学习"><span class="nav-number">1.</span> <span class="nav-text"><a href="#requests&#x6A21;&#x5757;&#x7684;&#x5B66;&#x4E60;" class="headerlink" title="requests&#x6A21;&#x5757;&#x7684;&#x5B66;&#x4E60;"></a>requests&#x6A21;&#x5757;&#x7684;&#x5B66;&#x4E60;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用事前"><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#&#x4F7F;&#x7528;&#x4E8B;&#x524D;" class="headerlink" title="&#x4F7F;&#x7528;&#x4E8B;&#x524D;"></a>&#x4F7F;&#x7528;&#x4E8B;&#x524D;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发送get-post请求，获取响应"><span class="nav-number">1.2.</span> <span class="nav-text"><a href="#&#x53D1;&#x9001;get-post&#x8BF7;&#x6C42;&#xFF0C;&#x83B7;&#x53D6;&#x54CD;&#x5E94;" class="headerlink" title="&#x53D1;&#x9001;get,post&#x8BF7;&#x6C42;&#xFF0C;&#x83B7;&#x53D6;&#x54CD;&#x5E94;"></a>&#x53D1;&#x9001;get,post&#x8BF7;&#x6C42;&#xFF0C;&#x83B7;&#x53D6;&#x54CD;&#x5E94;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#response-的方法"><span class="nav-number">1.2.1.</span> <span class="nav-text"><a href="#response-&#x7684;&#x65B9;&#x6CD5;" class="headerlink" title="response &#x7684;&#x65B9;&#x6CD5;"></a>response &#x7684;&#x65B9;&#x6CD5;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取网页源码的正确打开方式-通过下面三种方式一定可以获得相应的网页请求"><span class="nav-number">1.2.2.</span> <span class="nav-text"><a href="#&#x83B7;&#x53D6;&#x7F51;&#x9875;&#x6E90;&#x7801;&#x7684;&#x6B63;&#x786E;&#x6253;&#x5F00;&#x65B9;&#x5F0F;-&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x4E00;&#x5B9A;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x76F8;&#x5E94;&#x7684;&#x7F51;&#x9875;&#x8BF7;&#x6C42;" class="headerlink" title="&#x83B7;&#x53D6;&#x7F51;&#x9875;&#x6E90;&#x7801;&#x7684;&#x6B63;&#x786E;&#x6253;&#x5F00;&#x65B9;&#x5F0F;(&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x4E00;&#x5B9A;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x76F8;&#x5E94;&#x7684;&#x7F51;&#x9875;&#x8BF7;&#x6C42;)"></a>&#x83B7;&#x53D6;&#x7F51;&#x9875;&#x6E90;&#x7801;&#x7684;&#x6B63;&#x786E;&#x6253;&#x5F00;&#x65B9;&#x5F0F;(&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x4E00;&#x5B9A;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x76F8;&#x5E94;&#x7684;&#x7F51;&#x9875;&#x8BF7;&#x6C42;)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发送带Header的请求-字典形式"><span class="nav-number">1.3.</span> <span class="nav-text"><a href="#&#x53D1;&#x9001;&#x5E26;Header&#x7684;&#x8BF7;&#x6C42;-&#x5B57;&#x5178;&#x5F62;&#x5F0F;" class="headerlink" title="&#x53D1;&#x9001;&#x5E26;Header&#x7684;&#x8BF7;&#x6C42;(&#x5B57;&#x5178;&#x5F62;&#x5F0F;)"></a>&#x53D1;&#x9001;&#x5E26;Header&#x7684;&#x8BF7;&#x6C42;(&#x5B57;&#x5178;&#x5F62;&#x5F0F;)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用超时参数"><span class="nav-number">1.4.</span> <span class="nav-text"><a href="#&#x4F7F;&#x7528;&#x8D85;&#x65F6;&#x53C2;&#x6570;" class="headerlink" title="&#x4F7F;&#x7528;&#x8D85;&#x65F6;&#x53C2;&#x6570;"></a>&#x4F7F;&#x7528;&#x8D85;&#x65F6;&#x53C2;&#x6570;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#retrying模块学习"><span class="nav-number">1.4.1.</span> <span class="nav-text"><a href="#retrying&#x6A21;&#x5757;&#x5B66;&#x4E60;" class="headerlink" title="retrying&#x6A21;&#x5757;&#x5B66;&#x4E60;"></a>retrying&#x6A21;&#x5757;&#x5B66;&#x4E60;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理cookie相关的请求"><span class="nav-number">1.5.</span> <span class="nav-text"><a href="#&#x5904;&#x7406;cookie&#x76F8;&#x5173;&#x7684;&#x8BF7;&#x6C42;" class="headerlink" title="&#x5904;&#x7406;cookie&#x76F8;&#x5173;&#x7684;&#x8BF7;&#x6C42;"></a>&#x5904;&#x7406;cookie&#x76F8;&#x5173;&#x7684;&#x8BF7;&#x6C42;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字典推倒式"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x5B57;&#x5178;&#x63A8;&#x5012;&#x5F0F;" class="headerlink" title="&#x5B57;&#x5178;&#x63A8;&#x5012;&#x5F0F;"></a>&#x5B57;&#x5178;&#x63A8;&#x5012;&#x5F0F;</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#requests模块的学习"><span class="nav-number">1.</span> <span class="nav-text"><a href="#requests&#x6A21;&#x5757;&#x7684;&#x5B66;&#x4E60;" class="headerlink" title="requests&#x6A21;&#x5757;&#x7684;&#x5B66;&#x4E60;"></a>requests&#x6A21;&#x5757;&#x7684;&#x5B66;&#x4E60;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用事前"><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#&#x4F7F;&#x7528;&#x4E8B;&#x524D;" class="headerlink" title="&#x4F7F;&#x7528;&#x4E8B;&#x524D;"></a>&#x4F7F;&#x7528;&#x4E8B;&#x524D;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发送get-post请求，获取响应"><span class="nav-number">1.2.</span> <span class="nav-text"><a href="#&#x53D1;&#x9001;get-post&#x8BF7;&#x6C42;&#xFF0C;&#x83B7;&#x53D6;&#x54CD;&#x5E94;" class="headerlink" title="&#x53D1;&#x9001;get,post&#x8BF7;&#x6C42;&#xFF0C;&#x83B7;&#x53D6;&#x54CD;&#x5E94;"></a>&#x53D1;&#x9001;get,post&#x8BF7;&#x6C42;&#xFF0C;&#x83B7;&#x53D6;&#x54CD;&#x5E94;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#response-的方法"><span class="nav-number">1.2.1.</span> <span class="nav-text"><a href="#response-&#x7684;&#x65B9;&#x6CD5;" class="headerlink" title="response &#x7684;&#x65B9;&#x6CD5;"></a>response &#x7684;&#x65B9;&#x6CD5;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取网页源码的正确打开方式-通过下面三种方式一定可以获得相应的网页请求"><span class="nav-number">1.2.2.</span> <span class="nav-text"><a href="#&#x83B7;&#x53D6;&#x7F51;&#x9875;&#x6E90;&#x7801;&#x7684;&#x6B63;&#x786E;&#x6253;&#x5F00;&#x65B9;&#x5F0F;-&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x4E00;&#x5B9A;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x76F8;&#x5E94;&#x7684;&#x7F51;&#x9875;&#x8BF7;&#x6C42;" class="headerlink" title="&#x83B7;&#x53D6;&#x7F51;&#x9875;&#x6E90;&#x7801;&#x7684;&#x6B63;&#x786E;&#x6253;&#x5F00;&#x65B9;&#x5F0F;(&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x4E00;&#x5B9A;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x76F8;&#x5E94;&#x7684;&#x7F51;&#x9875;&#x8BF7;&#x6C42;)"></a>&#x83B7;&#x53D6;&#x7F51;&#x9875;&#x6E90;&#x7801;&#x7684;&#x6B63;&#x786E;&#x6253;&#x5F00;&#x65B9;&#x5F0F;(&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x4E00;&#x5B9A;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x76F8;&#x5E94;&#x7684;&#x7F51;&#x9875;&#x8BF7;&#x6C42;)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发送带Header的请求-字典形式"><span class="nav-number">1.3.</span> <span class="nav-text"><a href="#&#x53D1;&#x9001;&#x5E26;Header&#x7684;&#x8BF7;&#x6C42;-&#x5B57;&#x5178;&#x5F62;&#x5F0F;" class="headerlink" title="&#x53D1;&#x9001;&#x5E26;Header&#x7684;&#x8BF7;&#x6C42;(&#x5B57;&#x5178;&#x5F62;&#x5F0F;)"></a>&#x53D1;&#x9001;&#x5E26;Header&#x7684;&#x8BF7;&#x6C42;(&#x5B57;&#x5178;&#x5F62;&#x5F0F;)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用超时参数"><span class="nav-number">1.4.</span> <span class="nav-text"><a href="#&#x4F7F;&#x7528;&#x8D85;&#x65F6;&#x53C2;&#x6570;" class="headerlink" title="&#x4F7F;&#x7528;&#x8D85;&#x65F6;&#x53C2;&#x6570;"></a>&#x4F7F;&#x7528;&#x8D85;&#x65F6;&#x53C2;&#x6570;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#retrying模块学习"><span class="nav-number">1.4.1.</span> <span class="nav-text"><a href="#retrying&#x6A21;&#x5757;&#x5B66;&#x4E60;" class="headerlink" title="retrying&#x6A21;&#x5757;&#x5B66;&#x4E60;"></a>retrying&#x6A21;&#x5757;&#x5B66;&#x4E60;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理cookie相关的请求"><span class="nav-number">1.5.</span> <span class="nav-text"><a href="#&#x5904;&#x7406;cookie&#x76F8;&#x5173;&#x7684;&#x8BF7;&#x6C42;" class="headerlink" title="&#x5904;&#x7406;cookie&#x76F8;&#x5173;&#x7684;&#x8BF7;&#x6C42;"></a>&#x5904;&#x7406;cookie&#x76F8;&#x5173;&#x7684;&#x8BF7;&#x6C42;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字典推导式"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;" class="headerlink" title="&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;"></a>&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;</span></a></li></ol></div>
             
 
           </div>

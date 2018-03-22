@@ -228,7 +228,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/第三部分/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/python爬虫学习/第三部分/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cuijunlei">
@@ -247,7 +247,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/21/第三部分/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2018/03/21/python爬虫学习/第三部分/" itemprop="url">第三部分：数据提取方法</a></h1>
         
 
         <div class="post-meta">
@@ -259,7 +259,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-21T20:15:55+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-21T21:12:51+08:00">
                 2018-03-21
               </time>
             
@@ -449,7 +449,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/第一部分/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/python爬虫学习/第一部分/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cuijunlei">
@@ -468,7 +468,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/21/第一部分/" itemprop="url">第一部分</a></h1>
+                <a class="post-title-link" href="/2018/03/21/python爬虫学习/第一部分/" itemprop="url">第一部分：爬虫概念，工具和HTTP</a></h1>
         
 
         <div class="post-meta">
@@ -667,7 +667,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/第二部分/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/python爬虫学习/第二部分/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cuijunlei">
@@ -686,7 +686,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/21/第二部分/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2018/03/21/python爬虫学习/第二部分/" itemprop="url">第二部分：requests模块学习</a></h1>
         
 
         <div class="post-meta">
@@ -794,7 +794,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="字典推倒式"><a href="#字典推倒式" class="headerlink" title="字典推倒式"></a>字典推倒式</h1><ul>
+<h1 id="字典推导式"><a href="#字典推导式" class="headerlink" title="字典推导式"></a>字典推导式</h1><ul>
 <li>可以把字符串转化为字典形式  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cookie = <span class="string">"BIDUPSID=D7F0CDF633A0261AC63033983555E4B8; PSTM=1502592197; BAIDUID=688900B6A843179BB4682296FC040DCC:FG=1; BDUSS=B3azBtSjg4VjNHajZsc3h6R01mfmwyaTZ2Ty1HaWhWWS1Ba1lnRGNGZjhsTTlaSUFBQUFBJCQAAAAAAAAAAAEAAABReqJYt9bJ7cr1MjAxNgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwHqFn8B6hZej; H_PS_PSSID=1439_21109_17001_22159; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BD_CK_SAM=1; PSINO=2; BDRCVFR[feWj1Vr5u3D]=mk3SLVN4HKm; BD_UPN=14314654; WWW_ST=1521449610205"</span></span><br><span class="line">cookie_dict = &#123;i.split(<span class="string">"="</span>)[<span class="number">0</span>]:i.split(<span class="string">"="</span>)[<span class="number">-1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> cookie.split(<span class="string">"; "</span>)&#125;</span><br><span class="line">print(cookie_dict)</span><br><span class="line">response = requests.get(url,headers = headers,cookies=cookie_dict)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"renren2.html"</span>,<span class="string">"w"</span>,encoding = <span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(response.content.decode())</span><br></pre></td></tr></table></figure></li>
 </ul>
 
@@ -845,7 +845,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/17/python爬虫笔记（二）：利用模拟浏览器爬取网页/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/17/爬虫笔记/python爬虫笔记（二）：利用模拟浏览器爬取网页/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cuijunlei">
@@ -864,7 +864,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/17/python爬虫笔记（二）：利用模拟浏览器爬取网页/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2017/12/17/爬虫笔记/python爬虫笔记（二）：利用模拟浏览器爬取网页/" itemprop="url">浏览器的模拟--Header属性</a></h1>
         
 
         <div class="post-meta">
@@ -971,7 +971,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/17/python爬虫学习笔记(一)：open( )函数打开文件路径报错问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/17/爬虫笔记/python爬虫学习笔记(一)：open( )函数打开文件路径报错问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cuijunlei">
@@ -990,7 +990,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/17/python爬虫学习笔记(一)：open( )函数打开文件路径报错问题/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2017/12/17/爬虫笔记/python爬虫学习笔记(一)：open( )函数打开文件路径报错问题/" itemprop="url">python爬虫学习笔记(一)</a></h1>
         
 
         <div class="post-meta">
@@ -1114,7 +1114,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/Markdown/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/14/初步认识hexo/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cuijunlei">
@@ -1133,153 +1133,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/15/Markdown/" itemprop="url">Markdown</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-15T21:12:51+08:00">
-                2017-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a><center>Markdown</center></h1><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a><center>一级标题</center></h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><ul>
-<li>我的第一行 </li>
-</ul>
-<ul>
-<li>我的第二行<blockquote>
-<p>我一直在使用引用 </p>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>从现在开始</p>
-</blockquote>
-<p><a href="http://baidu.com" target="_blank" rel="noopener">Baidu</a></p>
-<p><img src="http://image.so.com/v?q=%E7%BE%8E%E6%99%AF&amp;cmsid=7dc8b5dfb7db1ca53dec66ab145a4d64&amp;cmran=0&amp;cmras=0&amp;i=0&amp;cmg=f30ec52fc98b50534d6d334c97d557e8&amp;src=360pic_strong&amp;z=1#q=%E7%BE%8E%E6%99%AF&amp;i=0&amp;src=360pic_strong&amp;z=1&amp;lightboxindex=0&amp;id=d64c9b0b65e4dfb34e57fe1d2631c13f&amp;multiple=0&amp;itemindex=0&amp;dataindex=0&amp;prevsn=0&amp;currsn=0&amp;jdx=0&amp;fsn=60&amp;kn=50&amp;gn=0&amp;cn=0&amp;gsrc=1" alt="美景图片"></p>
-<p><em>你好</em> </p>
-<p><strong>你好呀</strong></p>
-<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><table><br>    <tr><br>        <td>第一组</td><br>        <td>一班</td><br>    </tr><br>    <tr><br>        <td>第二组</td><br>        <td>二班</td><br>    </tr><br></table>
-
-<p>\</p>
-<p>`</p>
-<p>*</p>
-<p>-</p>
-<p>{你好}</p>
-<p>[hello!]</p>
-<p>(呀呀呀)</p>
-<p>#</p>
-<p>+-*/</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">contents = requests.get(<span class="string">'https://book.douban.com/latest?icn=index-latestbook-all'</span>).text</span><br><span class="line">pattern = re.compile(<span class="string">'&lt;li.*?detail-frame.*?href=.*?&gt;(.*?)&lt;/a&gt;.*?color-gray"&gt;(.*?)&lt;/p&gt;'</span>,re.S)</span><br><span class="line"></span><br><span class="line">resulta = re.findall(pattern,contents)</span><br><span class="line">print(resulta)</span><br><span class="line"><span class="keyword">for</span> resultas <span class="keyword">in</span> resulta:</span><br><span class="line">    name,year = resultas</span><br><span class="line">    year = re.sub(<span class="string">'\s'</span>,<span class="string">''</span>,year)</span><br><span class="line">    print(name,year)</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/14/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cuijunlei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="flying-fisher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/14/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2017/12/14/初步认识hexo/hello-world/" itemprop="url">Hello World</a></h1>
         
 
         <div class="post-meta">
@@ -1421,7 +1275,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1429,6 +1283,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
