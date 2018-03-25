@@ -1,7 +1,8 @@
 ---
-title: github上传笔记
 author: cuijunlei
-data: 2018/3/23
+title: github上传笔记
+date: 2018-3-23 19：01：10
+tags: 笔记
 --- 
 # <center>Github上传本地文档笔记</center>
 ## 分三步：
