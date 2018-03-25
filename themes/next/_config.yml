@@ -92,11 +92,11 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: / || home
-  about: /about/ || user
-  tags: /tags/ || tags
-  categories: /categories/ || th
-  archives: /archives/ || archive
+  home: /
+  about: /about
+  tags: /tags
+  categories: /categories
+  archives: /archives
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -118,14 +118,17 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 #scheme: Gemini
 
 
 # ---------------------------------------------------------------
-# Sidebar Settings
+sidebar:
+  postion: left
+  display: post
+
 # ---------------------------------------------------------------
 
 # Social Links.
@@ -167,7 +170,7 @@ links_layout: block
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-#avatar: /images/avatar.gif
+avatar: /uploads/touxiang.jpg
 
 # Table Of Contents in the Sidebar
 toc:
