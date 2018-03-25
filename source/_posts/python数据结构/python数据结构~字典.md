@@ -1,6 +1,6 @@
 ---
 title: python中字典的循环遍历的两种方式
-data：2018:3:22
+data：2018-3-22 21:12:55
 ---
 
 # <center>python中字典的循环遍历的两种方式</center>

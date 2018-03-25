@@ -1,6 +1,6 @@
 ---
 title: github上传笔记
-date: 2018-3-23 19：01：10
+date: 2018-3-23 19:01:10
 --- 
 # <center>Github上传本地文档笔记</center>
 ## 分三步：
