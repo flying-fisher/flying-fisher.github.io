@@ -1,6 +1,6 @@
 ---
-title :github上传笔记
-author :cuijunlei
+title: github上传笔记
+author: cuijunlei
 datatime: 2018/3/23
 --- 
 # <center>Github上传本地文档笔记</center>
