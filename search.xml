@@ -6,7 +6,7 @@
       <title></title>
       <link href="/2018/03/23/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/github%E4%B8%8A%E4%BC%A0%E7%AC%94%E8%AE%B0/"/>
       <url>/2018/03/23/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/github%E4%B8%8A%E4%BC%A0%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<hr><p>title: github上传笔记</p><h2 id="date-2018-3-23-19：01：10"><a href="#date-2018-3-23-19：01：10" class="headerlink" title="date: 2018-3-23 19：01：10"></a>date: 2018-3-23 19：01：10</h2><h1 id="Github上传本地文档笔记"><a href="#Github上传本地文档笔记" class="headerlink" title="Github上传本地文档笔记"></a><center>Github上传本地文档笔记</center></h1><h2 id="分三步："><a href="#分三步：" class="headerlink" title="分三步："></a>分三步：</h2><ul><li>1.git add .(后面的点代表是要上传全部文件，如果上传一个文件，可以修改成文件名字)</li><li>2.git commit -m “说明上传的理由”</li><li>3.git push -u origin master(如果前面出现错误了，输入后者代码git pull –rebase origin master，然后再重新输入前面的代码)</li></ul>]]></content>
+      <content type="html"><![CDATA[<hr><p>title: github上传笔记</p><h2 id="date-2018-3-23-19-01-10"><a href="#date-2018-3-23-19-01-10" class="headerlink" title="date: 2018-3-23 19:01:10"></a>date: 2018-3-23 19:01:10</h2><h1 id="Github上传本地文档笔记"><a href="#Github上传本地文档笔记" class="headerlink" title="Github上传本地文档笔记"></a><center>Github上传本地文档笔记</center></h1><h2 id="分三步："><a href="#分三步：" class="headerlink" title="分三步："></a>分三步：</h2><ul><li>1.git add .(后面的点代表是要上传全部文件，如果上传一个文件，可以修改成文件名字)</li><li>2.git commit -m “说明上传的理由”</li><li>3.git push -u origin master(如果前面出现错误了，输入后者代码git pull –rebase origin master，然后再重新输入前面的代码)</li></ul>]]></content>
       
       
     </entry>
