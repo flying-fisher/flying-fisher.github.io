@@ -1,7 +1,7 @@
 ---
 title: github上传笔记
 date: 2018-3-20 20：10：12
-tags: 
+tags: github
 ---
  
 # <center>Github上传本地文档笔记</center>

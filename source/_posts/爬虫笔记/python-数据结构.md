@@ -1,7 +1,7 @@
 ---
 title: python-数据结构
 date: 2018-03-26 12:26:02
-tags:
+tags: python
 ---
 # <center>python中字典的循环遍历的两种方式</center>
 

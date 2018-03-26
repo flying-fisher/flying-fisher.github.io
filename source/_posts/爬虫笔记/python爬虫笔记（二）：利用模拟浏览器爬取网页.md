@@ -1,7 +1,11 @@
 ---
 title: 浏览器的模拟--Header属性
 date: 2018-2-22 21：01：10
-tags: 浏览器header
+tags:
+- python学习笔记
+
+categories:
+- Thinking
 ---
 
 # <center>浏览器的模拟--Header属性</center> 
