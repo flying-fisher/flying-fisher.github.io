@@ -4,37 +4,46 @@
     
     <entry>
       <title>python-数据结构</title>
-      <link href="/2018/03/26/python-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-      <url>/2018/03/26/python-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+      <link href="/2018/03/26/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B0/python-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <url>/2018/03/26/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B0/python-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
       <content type="html"><![CDATA[<h1 id="python中字典的循环遍历的两种方式"><a href="#python中字典的循环遍历的两种方式" class="headerlink" title="python中字典的循环遍历的两种方式"></a><center>python中字典的循环遍历的两种方式</center></h1><h2 id="python中字典的循环遍历的两种方式-1"><a href="#python中字典的循环遍历的两种方式-1" class="headerlink" title="python中字典的循环遍历的两种方式"></a>python中字典的循环遍历的两种方式</h2><ul><li><p>1.只对键的遍历</p><ul><li>一个简单的for语句就能循环字典的所有键，就像处理序列一样：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dictionary = &#123; <span class="string">"some_key"</span>: <span class="string">"some_value"</span> &#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dictionary:</span><br><span class="line">    print(<span class="string">"%s --&gt; %s"</span> %(key, dictionary[key]))</span><br></pre></td></tr></table></figure></li></ul></li><li><p>2.对键和值都进行遍历</p><ul><li><p>如果只需要值，可以使用d.values，如果想获取所有的键则可以使用d.keys。</p></li><li><p>如果想获取键和值d.items方法会将键-值对作为元组返回，for循环的一大好处就是可以循环中使用序列解包。</p></li><li>代码实例<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> d.items():</span><br><span class="line">    <span class="keyword">print</span> (key, <span class="string">' value : '</span>, value)</span><br><span class="line"></span><br><span class="line">    结果如下：</span><br><span class="line">    name1 value : pythontab</span><br><span class="line">    name2 value : .</span><br><span class="line">    name3 value : com</span><br></pre></td></tr></table></figure></li></ul></li></ul>]]></content>
       
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
       
     </entry>
     
     <entry>
       <title>Markdown</title>
-      <link href="/2018/03/26/Markdown/"/>
-      <url>/2018/03/26/Markdown/</url>
+      <link href="/2018/03/26/%E5%88%9D%E6%AD%A5%E8%AE%A4%E8%AF%86hexo/Markdown/"/>
+      <url>/2018/03/26/%E5%88%9D%E6%AD%A5%E8%AE%A4%E8%AF%86hexo/Markdown/</url>
       <content type="html"><![CDATA[<h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a><center>Markdown</center></h1><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a><center>一级标题</center></h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><ul><li>我的第一行 </li></ul><ul><li>我的第二行<blockquote><p>我一直在使用引用 </p></blockquote></li></ul><blockquote><p>从现在开始</p></blockquote><p><a href="http://baidu.com" target="_blank" rel="noopener">Baidu</a></p><p><a href="http://image.so.com/v?q=%E7%BE%8E%E6%99%AF&amp;cmsid=7dc8b5dfb7db1ca53dec66ab145a4d64&amp;cmran=0&amp;cmras=0&amp;i=0&amp;cmg=f30ec52fc98b50534d6d334c97d557e8&amp;src=360pic_strong&amp;z=1#q=%E7%BE%8E%E6%99%AF&amp;i=0&amp;src=360pic_strong&amp;z=1&amp;lightboxindex=0&amp;id=d64c9b0b65e4dfb34e57fe1d2631c13f&amp;multiple=0&amp;itemindex=0&amp;dataindex=0&amp;prevsn=0&amp;currsn=0&amp;jdx=0&amp;fsn=60&amp;kn=50&amp;gn=0&amp;cn=0&amp;gsrc=1" target="_blank" rel="noopener">美景图片</a></p><p><em>你好</em> </p><p><strong>你好呀</strong></p><h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><table><br>    <tr><br>        <td>第一组</td><br>        <td>一班</td><br>    </tr><br>    <tr><br>        <td>第二组</td><br>        <td>二班</td><br>    </tr><br></table><p>\</p><p>`</p><p>*</p><p>-</p><p>{你好}</p><p>[hello!]</p><p>(呀呀呀)</p><p>#</p><p>+-*/</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">contents = requests.get(<span class="string">'https://book.douban.com/latest?icn=index-latestbook-all'</span>).text</span><br><span class="line">pattern = re.compile(<span class="string">'&lt;li.*?detail-frame.*?href=.*?&gt;(.*?)&lt;/a&gt;.*?color-gray"&gt;(.*?)&lt;/p&gt;'</span>,re.S)</span><br><span class="line"></span><br><span class="line">resulta = re.findall(pattern,contents)</span><br><span class="line">print(resulta)</span><br><span class="line"><span class="keyword">for</span> resultas <span class="keyword">in</span> resulta:</span><br><span class="line">    name,year = resultas</span><br><span class="line">    year = re.sub(<span class="string">'\s'</span>,<span class="string">''</span>,year)</span><br><span class="line">    print(name,year)</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>]]></content>
       
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
       
     </entry>
     
     <entry>
       <title>hexo博客原文上传github</title>
-      <link href="/2018/03/26/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0~%E7%AC%AC%E4%BA%8C%E7%AF%87/"/>
-      <url>/2018/03/26/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0~%E7%AC%AC%E4%BA%8C%E7%AF%87/</url>
-      <content type="html"><![CDATA[<h1 id="hexo博客原文上传github"><a href="#hexo博客原文上传github" class="headerlink" title="hexo博客原文上传github"></a>hexo博客原文上传github</h1>]]></content>
+      <link href="/2018/03/26/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0~%E7%AC%AC%E4%BA%8C%E7%AF%87/"/>
+      <url>/2018/03/26/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0~%E7%AC%AC%E4%BA%8C%E7%AF%87/</url>
+      <content type="html"><![CDATA[<h1 id="hexo博客原文上传github"><a href="#hexo博客原文上传github" class="headerlink" title="hexo博客原文上传github"></a><center>hexo博客原文上传github</center></h1><h2 id="HEXO常用命令"><a href="#HEXO常用命令" class="headerlink" title="HEXO常用命令"></a>HEXO常用命令</h2><ul><li>单条指令<ul><li>1.hexo new “postName” # 新建文章</li><li>2.hexo new page “pageName” # 新建页面</li><li>3.hexo clean # 清除之前 public 文件夹的内容</li><li>4.hexo generate # 生成静态页面至public目录</li><li>5.hexo deploy # 将.deploy目录部署到GitHub</li><li>6.hexo server # 开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</li><li>7.hexo help # 查看帮助</li><li>8.hexo version # 查看HEXO的版本</li></ul></li><li>简写指令<ul><li>1.hexo n == hexo new</li><li>2.hexo g == hexo generate</li><li>3.hexo d == hexo deploy</li><li>4.hexo s == hexo server</li><li>5.hexo v == hexo version</li></ul></li><li>复合指令<ul><li>1.hexo deploy -g #生成加部署</li><li>2.hexo server -g #生成加预览</li><li>3.hexo d –g 或者 hexo g –d #生成加部署</li></ul></li></ul>]]></content>
       
       
-    </entry>
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2018/03/26/hello-world/"/>
-      <url>/2018/03/26/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
+        <tags>
+            
+            <tag> github </tag>
+            
+        </tags>
       
     </entry>
     
@@ -44,10 +53,16 @@
       <url>/2018/03/26/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B0/python%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E5%88%A9%E7%94%A8%E6%A8%A1%E6%8B%9F%E6%B5%8F%E8%A7%88%E5%99%A8%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5/</url>
       <content type="html"><![CDATA[<h1 id="浏览器的模拟–Header属性"><a href="#浏览器的模拟–Header属性" class="headerlink" title="浏览器的模拟–Header属性"></a><center>浏览器的模拟–Header属性</center></h1><p>有的时候，我们无法爬取一些网页，会出现403错误，因为这些网页为了防止被人恶意采集其信息所以进行了一些反爬虫的设置。<br>可以设置一些Header信息，模拟成浏览器去访问这些网站，解决这种问题。</p><p>爬取CSDN博客的内容为例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line">url = <span class="string">"http://blog.csdn.net/weiwei_pig/article/details/51178226"</span></span><br><span class="line">file = urllib.request.urlopen(url)</span><br></pre></td></tr></table></figure></p><p>此时会出现403异常，即禁止访问的错误，所以接下来我们需要让爬虫模拟成浏览器。模拟成浏览器可以设置User-Agent信息。通过我寻找到百度的User-agent直接使用：如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User-Agent:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36</span><br></pre></td></tr></table></figure></p><h1 id="方法一：使用build-opener-修改报头"><a href="#方法一：使用build-opener-修改报头" class="headerlink" title="方法一：使用build_opener()修改报头"></a>方法一：使用build_opener()修改报头</h1><p>由于urlopen()不支持一些HTTP的高级功能，所以，我们要修改报头，可以使用urllib.request.build_opener()进行，模拟浏览器的代码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line">url = <span class="string">"http://blog.csdn.net/weiwei_pig/article/details/51178226"</span></span><br><span class="line">headers = (<span class="string">"User-Agent"</span>,<span class="string">"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36"</span>)</span><br><span class="line">opener = urllib.request.build_opener()</span><br><span class="line">opener.addheaders = [headers]</span><br><span class="line"></span><br><span class="line">data = opener.open(url).read()</span><br></pre></td></tr></table></figure></p><p>爬取的内容可以写入文件：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fhandle = open(<span class="string">"e:/scrapy_data/3.html"</span>,<span class="string">"wb"</span>)</span><br><span class="line">fhandle.write(data)</span><br><span class="line">fhandle.close()</span><br></pre></td></tr></table></figure></p><h1 id="方法二：使用add-header-添加报头"><a href="#方法二：使用add-header-添加报头" class="headerlink" title="方法二：使用add_header()添加报头"></a>方法二：使用add_header()添加报头</h1><p>还可以利用urllib.request.Request()下的add_header()实现浏览器的模拟。代码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line">url = <span class="string">"http://blog.csdn.net/weiwei_pig/article/details/51178226"</span></span><br><span class="line">req = urllib.request.Request(url)</span><br><span class="line">req.add_header (<span class="string">"User-Agent"</span>,<span class="string">"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36"</span>)</span><br><span class="line">data = urllib.request.urlopen(url).read()</span><br></pre></td></tr></table></figure></p><h1 id="代理服务器的设置"><a href="#代理服务器的设置" class="headerlink" title="代理服务器的设置"></a>代理服务器的设置</h1><p>网上整理好的网址(代理服务器)[<a href="http://yum.iqianyue.com/proxy" target="_blank" rel="noopener">http://yum.iqianyue.com/proxy</a>] 中找到很多代理服务器地址。打开网页之后，尽量找到验证时间比较短的。此时，我们可以选择第二个代理IP地址223.153.131.205，对应端口808，完整的格式为：“网址：端口号”，即223.153.131.205：808<br>用了代理IP地址之后，编写程序如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">use_proxy</span><span class="params">(proxy_addr,url)</span>:</span></span><br><span class="line">    <span class="keyword">import</span> urllib.request</span><br><span class="line">    proxy = urllib.request.ProxyHandler(&#123;<span class="string">'http'</span>:proxy_addr&#125;)</span><br><span class="line">    opener = urllib.request.build_opener(proxy,urllib.request.HTTPHandler)</span><br><span class="line">    urllib.request.install_opener(opener)</span><br><span class="line">    data = urllib.request.urlopen(url).read().decode(<span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line">proxy_addr = <span class="string">"223.153.131.205：808"</span></span><br><span class="line">data = use_proxy(proxy_addr,<span class="string">"http://www.baidu.xom"</span>)</span><br><span class="line">print(len(data))</span><br></pre></td></tr></table></figure></p>]]></content>
       
+      <categories>
+          
+          <category> Thinking </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> 浏览器header </tag>
+            <tag> python学习笔记 </tag>
             
         </tags>
       
@@ -59,10 +74,16 @@
       <url>/2018/03/26/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B0/python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)%EF%BC%9Aopen(%20)%E5%87%BD%E6%95%B0%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/</url>
       <content type="html"><![CDATA[<h1 id="python爬虫学习笔记-一-：open（）函数打开文件路径报错"><a href="#python爬虫学习笔记-一-：open（）函数打开文件路径报错" class="headerlink" title="python爬虫学习笔记(一)：open（）函数打开文件路径报错"></a><center>python爬虫学习笔记(一)：open（）函数打开文件路径报错<center></center></center></h1><h2 id="要以读文件的模式打开一个文件对象，使用Python内置的open-函数，传入文件名和标示符，标示符’r’表示读。"><a href="#要以读文件的模式打开一个文件对象，使用Python内置的open-函数，传入文件名和标示符，标示符’r’表示读。" class="headerlink" title="要以读文件的模式打开一个文件对象，使用Python内置的open()函数，传入文件名和标示符，标示符’r’表示读。"></a>要以读文件的模式打开一个文件对象，使用Python内置的open()函数，传入文件名和标示符，标示符’r’表示读。</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file = open(<span class="string">'e:\scrapy_data\1.html'</span>,<span class="string">'wb'</span>)</span><br></pre></td></tr></table></figure><h2 id="对于初学python者，open（）函数很容易报错，并且不易被发现"><a href="#对于初学python者，open（）函数很容易报错，并且不易被发现" class="headerlink" title="对于初学python者，open（）函数很容易报错，并且不易被发现"></a>对于初学python者，open（）函数很容易报错，并且不易被发现</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fhandle = open(<span class="string">"E:\scrapy_data\1.html"</span>,<span class="string">"wb"</span>)</span><br><span class="line">fhandle.write(data)</span><br><span class="line"></span><br><span class="line">OSError                                   Traceback (most recent call last)</span><br><span class="line">&lt;ipython-input<span class="number">-24</span>-cb34cdc3c531&gt; <span class="keyword">in</span> &lt;module&gt;()</span><br><span class="line">----&gt; 1 fhandle = open("E:\scrapy_data\1.html","wb")</span><br><span class="line">      <span class="number">2</span> fhandle.write(data)</span><br><span class="line"></span><br><span class="line">OSError: [Errno <span class="number">22</span>] Invalid argument: <span class="string">'E:\\scrapy_data\x01.html'</span></span><br></pre></td></tr></table></figure><p>看着跟教程一模一样！只有斜杠的方向不一样，这里跟平常见得斜杠语法不一样，python语言里有一个转义字符的概念，需要在字符中使用特殊字符时，python用反斜杠’\’转义字符，所以错误案例中的’\’被用作转义，导致解释器解释文件路径错误。</p><ul><li>改正的方法有两种：<br>   第一、将’\’的方向反向为’/’，即文首正确的写法；<br>   第二、在含有转义符的字符串前加‘r’表示字符串内按原始含义解释，不做转义处理。（推荐！）</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file = open(<span class="string">r"e:\scrapy_data\1.html"</span>)</span><br></pre></td></tr></table></figure><h1 id="转义字符表"><a href="#转义字符表" class="headerlink" title="转义字符表"></a>转义字符表</h1><center><table><br>    <tr><br>        <td>转义字符</td><br>        <td>描述</td><br>    </tr><br>    <tr><br>        <td>(在行尾时)</td><br>        <td>续行符</td><br>    </tr><br>    <tr><br>        <td>\</td><br>        <td>反斜杠符号</td><br>    </tr><br>    <tr><br>        <td>\’</td><br>        <td>单引号</td><br>    </tr><br>    <tr><br>        <td>\”</td><br>        <td>双引号</td><br>    </tr><br>    <tr><br>        <td>\n</td><br>        <td>换行</td><br>    </tr><br>    <tr><br>        <td>\t</td><br>        <td>横向制表符</td><br>    </tr><br>    <tr><br>        <td>\v</td><br>        <td>纵向制表符</td><br>    </tr><br>    <tr><br>        <td>\r</td><br>        <td>回车</td><br>    </tr><br>    <tr><br>        <td>\f</td><br>        <td><br>换页</td><br>    </tr><br>    <tr><br>        <td>\oyy</td><br>        <td>八进制数，yy代表的字符，例如：\o12代表换行</td><br>    </tr><br></table><br></center><h1 id="open-函数标识符表"><a href="#open-函数标识符表" class="headerlink" title="open()函数标识符表"></a>open()函数标识符表</h1><ul><li>r 以只读方式打开文件。文件的指针将会放在文件的开头。这是默认模式。</li><li>rb 以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头。这是默认模式。</li><li>r+ 打开一个文件用于读写。文件指针将会放在文件的开头。</li><li>rb+ 以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头。</li><li>w 打开一个文件只用于写入。如果该文件已存在则将其覆盖。如果该文件不存在，创建新文件。</li><li>wb 以二进制格式打开一个文件只用于写入。如果该文件已存在则将其覆盖。如果该文件不存在，创建新文件。</li><li>w+ 打开一个文件用于读写。如果该文件已存在则将其覆盖。如果该文件不存在，创建新文件。</li><li>wb+ 以二进制格式打开一个文件用于读写。如果该文件已存在则将其覆盖。如果该文件不存在，创建新文件。</li><li>a 打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入。</li><li>ab 以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入。</li><li>a+ 打开一个文件用于读写。如果该文件已存在，文件指针将会放在文件的结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。</li><li>ab+ 以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。</li></ul>]]></content>
       
+      <categories>
+          
+          <category> Thinking </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> open()函数 </tag>
+            <tag> python学习笔记 </tag>
             
         </tags>
       
@@ -75,6 +96,12 @@
       <content type="html"><![CDATA[<h1 id="Github上传本地文档笔记"><a href="#Github上传本地文档笔记" class="headerlink" title="Github上传本地文档笔记"></a><center>Github上传本地文档笔记</center></h1><h2 id="分三步："><a href="#分三步：" class="headerlink" title="分三步："></a>分三步：</h2><ul><li>1.git add .(后面的点代表是要上传全部文件，如果上传一个文件，可以修改成文件名字)</li><li>2.git commit -m “说明上传的理由”</li><li>3.git push -u origin master(如果前面出现错误了，输入后者代码git pull –rebase origin master，然后再重新输入前面的代码)</li></ul>]]></content>
       
       
+        <tags>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
     </entry>
     
     <entry>
@@ -83,6 +110,12 @@
       <url>/2018/03/26/%E5%88%9D%E6%AD%A5%E8%AE%A4%E8%AF%86hexo/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
       
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
       
     </entry>
     
@@ -95,7 +128,7 @@
       
         <tags>
             
-            <tag> requests;retrying </tag>
+            <tag> python爬虫 </tag>
             
         </tags>
       
@@ -110,7 +143,7 @@
       
         <tags>
             
-            <tag> 爬虫概念;HTTP; </tag>
+            <tag> python爬虫 </tag>
             
         </tags>
       
@@ -125,7 +158,7 @@
       
         <tags>
             
-            <tag> json;xpath;lxml;python数据结构推导式 </tag>
+            <tag> python爬虫 </tag>
             
         </tags>
       
