@@ -1,8 +1,7 @@
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html 
-## Source: https://github.com/hexojs/hexo/
-
-# Site
+##Source: https://github.com/hexojs/hexo/
+#Site
 title: flying - fisher
 subtitle:
 description: 技术和生活，建立你我他
@@ -12,7 +11,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://flying-fisher.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
