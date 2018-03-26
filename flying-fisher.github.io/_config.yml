@@ -1,17 +1,18 @@
 # Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html 
-##Source: https://github.com/hexojs/hexo/
-#Site
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
 title: flying-fisher
 subtitle:
 description: 技术和生活，建立你我他
 author: 崔军磊
 language: zh-Hans
-timezone: Asia/Shanghai
+timezone: Asia/zhengzhou university
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://flying-fisher.github.io/
+url: http://yoursite.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -71,7 +72,6 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-plugins: hexo-generate-feed
 theme: next
 
 # Deployment
