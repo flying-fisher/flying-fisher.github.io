@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://flying-fisher.github.io/"/>
   <updated>2018-03-25T13:47:05.432Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://flying-fisher.github.io/</id>
   
   <author>
     <name>崔军磊</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title></title>
-    <link href="http://yoursite.com/2018/03/23/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/github%E4%B8%8A%E4%BC%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2018/03/23/日常笔记/github上传笔记/</id>
+    <link href="https://flying-fisher.github.io/2018/03/23/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/github%E4%B8%8A%E4%BC%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://flying-fisher.github.io/2018/03/23/日常笔记/github上传笔记/</id>
     <published>2018-03-23T11:37:48.450Z</published>
     <updated>2018-03-25T13:47:05.432Z</updated>
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title>第三部分：数据提取方法</title>
-    <link href="http://yoursite.com/2018/03/21/python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86/"/>
-    <id>http://yoursite.com/2018/03/21/python爬虫学习/第三部分/</id>
+    <link href="https://flying-fisher.github.io/2018/03/21/python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86/"/>
+    <id>https://flying-fisher.github.io/2018/03/21/python爬虫学习/第三部分/</id>
     <published>2018-03-21T13:12:55.000Z</published>
     <updated>2018-03-25T11:44:31.520Z</updated>
     
@@ -58,14 +58,14 @@
     </summary>
     
     
-      <category term="json;xpath;lxml;python数据结构推导式" scheme="http://yoursite.com/tags/json-xpath-lxml-python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%8E%A8%E5%AF%BC%E5%BC%8F/"/>
+      <category term="json;xpath;lxml;python数据结构推导式" scheme="https://flying-fisher.github.io/tags/json-xpath-lxml-python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%8E%A8%E5%AF%BC%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>第一部分：爬虫概念，工具和HTTP</title>
-    <link href="http://yoursite.com/2018/03/21/python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86/"/>
-    <id>http://yoursite.com/2018/03/21/python爬虫学习/第一部分/</id>
+    <link href="https://flying-fisher.github.io/2018/03/21/python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86/"/>
+    <id>https://flying-fisher.github.io/2018/03/21/python爬虫学习/第一部分/</id>
     <published>2018-03-21T12:15:45.138Z</published>
     <updated>2018-03-22T06:36:34.733Z</updated>
     
@@ -81,14 +81,14 @@
     </summary>
     
     
-      <category term="爬虫概念;HTTP;" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB%E6%A6%82%E5%BF%B5-HTTP/"/>
+      <category term="爬虫概念;HTTP;" scheme="https://flying-fisher.github.io/tags/%E7%88%AC%E8%99%AB%E6%A6%82%E5%BF%B5-HTTP/"/>
     
   </entry>
   
   <entry>
     <title>第二部分：requests模块学习</title>
-    <link href="http://yoursite.com/2018/03/21/python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86/"/>
-    <id>http://yoursite.com/2018/03/21/python爬虫学习/第二部分/</id>
+    <link href="https://flying-fisher.github.io/2018/03/21/python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86/"/>
+    <id>https://flying-fisher.github.io/2018/03/21/python爬虫学习/第二部分/</id>
     <published>2018-03-21T12:15:35.219Z</published>
     <updated>2018-03-22T06:36:32.533Z</updated>
     
@@ -104,14 +104,14 @@
     </summary>
     
     
-      <category term="requests;retrying" scheme="http://yoursite.com/tags/requests-retrying/"/>
+      <category term="requests;retrying" scheme="https://flying-fisher.github.io/tags/requests-retrying/"/>
     
   </entry>
   
   <entry>
     <title>浏览器的模拟--Header属性</title>
-    <link href="http://yoursite.com/2017/12/17/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B0/python%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E5%88%A9%E7%94%A8%E6%A8%A1%E6%8B%9F%E6%B5%8F%E8%A7%88%E5%99%A8%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5/"/>
-    <id>http://yoursite.com/2017/12/17/爬虫笔记/python爬虫笔记（二）：利用模拟浏览器爬取网页/</id>
+    <link href="https://flying-fisher.github.io/2017/12/17/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B0/python%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E5%88%A9%E7%94%A8%E6%A8%A1%E6%8B%9F%E6%B5%8F%E8%A7%88%E5%99%A8%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5/"/>
+    <id>https://flying-fisher.github.io/2017/12/17/爬虫笔记/python爬虫笔记（二）：利用模拟浏览器爬取网页/</id>
     <published>2017-12-17T10:46:00.269Z</published>
     <updated>2018-03-22T06:38:30.913Z</updated>
     
@@ -127,14 +127,14 @@
     </summary>
     
     
-      <category term="浏览器header" scheme="http://yoursite.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8header/"/>
+      <category term="浏览器header" scheme="https://flying-fisher.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8header/"/>
     
   </entry>
   
   <entry>
     <title>python爬虫学习笔记(一)</title>
-    <link href="http://yoursite.com/2017/12/17/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B0/python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)%EF%BC%9Aopen(%20)%E5%87%BD%E6%95%B0%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2017/12/17/爬虫笔记/python爬虫学习笔记(一)：open( )函数打开文件路径报错问题/</id>
+    <link href="https://flying-fisher.github.io/2017/12/17/%E7%88%AC%E8%99%AB%E7%AC%94%E8%AE%B0/python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)%EF%BC%9Aopen(%20)%E5%87%BD%E6%95%B0%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/"/>
+    <id>https://flying-fisher.github.io/2017/12/17/爬虫笔记/python爬虫学习笔记(一)：open( )函数打开文件路径报错问题/</id>
     <published>2017-12-17T03:22:47.300Z</published>
     <updated>2018-03-25T08:10:34.069Z</updated>
     
@@ -150,14 +150,14 @@
     </summary>
     
     
-      <category term="open()函数" scheme="http://yoursite.com/tags/open-%E5%87%BD%E6%95%B0/"/>
+      <category term="open()函数" scheme="https://flying-fisher.github.io/tags/open-%E5%87%BD%E6%95%B0/"/>
     
   </entry>
   
   <entry>
     <title>初识hexo博客</title>
-    <link href="http://yoursite.com/2017/12/14/%E5%88%9D%E6%AD%A5%E8%AE%A4%E8%AF%86hexo/hello-world/"/>
-    <id>http://yoursite.com/2017/12/14/初步认识hexo/hello-world/</id>
+    <link href="https://flying-fisher.github.io/2017/12/14/%E5%88%9D%E6%AD%A5%E8%AE%A4%E8%AF%86hexo/hello-world/"/>
+    <id>https://flying-fisher.github.io/2017/12/14/初步认识hexo/hello-world/</id>
     <published>2017-12-14T13:55:39.649Z</published>
     <updated>2018-03-25T08:10:18.481Z</updated>
     
