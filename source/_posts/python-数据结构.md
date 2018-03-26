@@ -1,8 +1,8 @@
 ---
-title: python中字典的循环遍历的两种方式
-data：2018-3-22 21:12:55
+title: python-数据结构
+date: 2018-03-26 12:26:02
+tags:
 ---
-
 # <center>python中字典的循环遍历的两种方式</center>
 
 
