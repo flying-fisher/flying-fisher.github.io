@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/python-数据结构/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="崔军磊">
@@ -294,7 +294,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/26/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2018/03/26/python-数据结构/" itemprop="url">python-数据结构</a></h1>
         
 
         <div class="post-meta">
@@ -306,7 +306,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T10:33:51+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T12:26:02+08:00">
                 2018-03-26
               </time>
             
@@ -346,16 +346,171 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h1 id="python中字典的循环遍历的两种方式"><a href="#python中字典的循环遍历的两种方式" class="headerlink" title="python中字典的循环遍历的两种方式"></a><center>python中字典的循环遍历的两种方式</center></h1><h2 id="python中字典的循环遍历的两种方式-1"><a href="#python中字典的循环遍历的两种方式-1" class="headerlink" title="python中字典的循环遍历的两种方式"></a>python中字典的循环遍历的两种方式</h2><ul>
+<li><p>1.只对键的遍历</p>
+<ul>
+<li>一个简单的for语句就能循环字典的所有键，就像处理序列一样：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dictionary = &#123; <span class="string">"some_key"</span>: <span class="string">"some_value"</span> &#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dictionary:</span><br><span class="line">    print(<span class="string">"%s --&gt; %s"</span> %(key, dictionary[key]))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>2.对键和值都进行遍历</p>
+<ul>
+<li><p>如果只需要值，可以使用d.values，如果想获取所有的键则可以使用d.keys。</p>
+</li>
+<li><p>如果想获取键和值d.items方法会将键-值对作为元组返回，for循环的一大好处就是可以循环中使用序列解包。</p>
+</li>
+<li>代码实例<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> d.items():</span><br><span class="line">    <span class="keyword">print</span> (key, <span class="string">' value : '</span>, value)</span><br><span class="line"></span><br><span class="line">    结果如下：</span><br><span class="line">    name1 value : pythontab</span><br><span class="line">    name2 value : .</span><br><span class="line">    name3 value : com</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/Markdown/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="崔军磊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="flying-fisher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/26/Markdown/" itemprop="url">Markdown</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T12:24:47+08:00">
+                2018-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a><center>Markdown</center></h1><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a><center>一级标题</center></h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><ul>
+<li>我的第一行 </li>
+</ul>
+<ul>
+<li>我的第二行<blockquote>
+<p>我一直在使用引用 </p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>从现在开始</p>
+</blockquote>
+<p><a href="http://baidu.com" target="_blank" rel="noopener">Baidu</a></p>
+<p><a href="http://image.so.com/v?q=%E7%BE%8E%E6%99%AF&amp;cmsid=7dc8b5dfb7db1ca53dec66ab145a4d64&amp;cmran=0&amp;cmras=0&amp;i=0&amp;cmg=f30ec52fc98b50534d6d334c97d557e8&amp;src=360pic_strong&amp;z=1#q=%E7%BE%8E%E6%99%AF&amp;i=0&amp;src=360pic_strong&amp;z=1&amp;lightboxindex=0&amp;id=d64c9b0b65e4dfb34e57fe1d2631c13f&amp;multiple=0&amp;itemindex=0&amp;dataindex=0&amp;prevsn=0&amp;currsn=0&amp;jdx=0&amp;fsn=60&amp;kn=50&amp;gn=0&amp;cn=0&amp;gsrc=1" target="_blank" rel="noopener">美景图片</a></p>
+<p><em>你好</em> </p>
+<p><strong>你好呀</strong></p>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><table><br>    <tr><br>        <td>第一组</td><br>        <td>一班</td><br>    </tr><br>    <tr><br>        <td>第二组</td><br>        <td>二班</td><br>    </tr><br></table>
+
+<p>\</p>
+<p>`</p>
+<p>*</p>
+<p>-</p>
+<p>{你好}</p>
+<p>[hello!]</p>
+<p>(呀呀呀)</p>
+<p>#</p>
+<p>+-*/</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">contents = requests.get(<span class="string">'https://book.douban.com/latest?icn=index-latestbook-all'</span>).text</span><br><span class="line">pattern = re.compile(<span class="string">'&lt;li.*?detail-frame.*?href=.*?&gt;(.*?)&lt;/a&gt;.*?color-gray"&gt;(.*?)&lt;/p&gt;'</span>,re.S)</span><br><span class="line"></span><br><span class="line">resulta = re.findall(pattern,contents)</span><br><span class="line">print(resulta)</span><br><span class="line"><span class="keyword">for</span> resultas <span class="keyword">in</span> resulta:</span><br><span class="line">    name,year = resultas</span><br><span class="line">    year = re.sub(<span class="string">'\s'</span>,<span class="string">''</span>,year)</span><br><span class="line">    print(name,year)</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
           
         
       
@@ -475,6 +630,134 @@
         
           
             <h1 id="hexo博客原文上传github"><a href="#hexo博客原文上传github" class="headerlink" title="hexo博客原文上传github"></a>hexo博客原文上传github</h1>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="崔军磊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="flying-fisher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/26/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T10:33:51+08:00">
+                2018-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
           
         
       
@@ -1426,252 +1709,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/python爬虫学习/第三部分/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="崔军磊">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="flying-fisher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/21/python爬虫学习/第三部分/" itemprop="url">第三部分：数据提取方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-21T21:12:55+08:00">
-                2018-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="数据提取方法"><a href="#数据提取方法" class="headerlink" title="数据提取方法"></a><center>数据提取方法</center></h1><h3 id="json"><a href="#json" class="headerlink" title="json"></a>json</h3><ul>
-<li>数据交换格式，看起来像python类型（列表，字典）的字符串</li>
-<li><p>使用json之前需要导入json模块</p>
-</li>
-<li><p>哪里会返回json的数据</p>
-<ul>
-<li>1.浏览器切换成手机版</li>
-<li>2.抓包</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>json.loads</p>
-<ul>
-<li>把json字符串转化为python类型</li>
-<li><code>json.loads(json字符串)</code></li>
-</ul>
-</li>
-<li><p>json.dumps</p>
-<ul>
-<li>把python类型转化为json字符串</li>
-<li><code>json.dumps({&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;2&quot;})</code></li>
-<li>json.dumps(ret1,ensure_ascii=False,indent=2)<ul>
-<li>ensure_ascii :让中文显示成中文</li>
-<li>indent : 能够让下一行在上一行的基础上空格</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>豆瓣电视爬虫案例</li>
-</ul>
-<h3 id="xpath和lxml"><a href="#xpath和lxml" class="headerlink" title="xpath和lxml"></a>xpath和lxml</h3><ul>
-<li>xpath<ul>
-<li>一门从html中提取数据的语言</li>
-</ul>
-</li>
-<li><p>xpath语法</p>
-<ul>
-<li>xpath helper插件：帮助我们从<code>elements</code>中定位数据</li>
-<li>1.选择节点（标签）<ul>
-<li><code>/html/head/meta</code> ：能够选中html下的head下的所有的meta标签</li>
-</ul>
-</li>
-<li>2.<code>//</code>： 能够从任意节点开始选择<ul>
-<li><code>//li</code> ：当前页面上的所有的li标签</li>
-<li><code>/html/head//link</code>:head标签中所有的link标签</li>
-</ul>
-</li>
-<li>3.<code>@符号的用途</code><ul>
-<li>选择具体某个元素：<code>//div[@class=&#39;feed-infinite-wrapper&#39;]/ul/li</code><ul>
-<li>选择class=’feed-infinite-wrapper’的div下的ul下的li</li>
-</ul>
-</li>
-<li><code>a/@href</code> :选择a的href的值</li>
-</ul>
-</li>
-<li>4.获取文本:<ul>
-<li><code>/a/text()</code> :获取a标签下的文本 </li>
-<li><code>/a//text()</code> :获取a标签下所有的文本 </li>
-</ul>
-</li>
-<li><ol>
-<li>点前<ul>
-<li>“./a” 当前节点下的a标签</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>lxml</p>
-<ul>
-<li>安装：pip install lxml<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line">element = etree.HTML(<span class="string">"html字符串"</span>)</span><br><span class="line">element.xpath(<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="基础知识点的学习"><a href="#基础知识点的学习" class="headerlink" title="基础知识点的学习"></a>基础知识点的学习</h3><ul>
-<li><p>format:字符串格式化的一种方式</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"&#123;&#125;年级"</span>.format(<span class="number">1</span>)</span><br><span class="line"><span class="string">"&#123;&#125;年级&#123;&#125;班"</span>.format([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">5</span>&#125;)</span><br><span class="line"><span class="string">"&#123;&#125;年级"</span>.format(&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>列表推导式</p>
-<ul>
-<li><p>帮助我们快速的生成包含一堆数据的列表</p>
-<p><code>[i+10 for i in range(10)]</code>—&gt;[10,11,12,13,…,19];<br><code>[&quot;10月{}日&quot;.format(i) for i in range(1,10)]</code>—&gt;[“10月1日”，…,”10月9日”]</p>
-</li>
-</ul>
-</li>
-<li><p>字典推导式</p>
-<ul>
-<li>帮助我们快速的生成包含一堆数据的字典<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;i+<span class="number">10</span>:i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>)&#125;</span><br><span class="line"><span class="comment"># &#123;10:0,11:1,12:2...19:9&#125;</span></span><br><span class="line">&#123;<span class="string">"a&#123;&#125;"</span>.format(i):<span class="number">10</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>)&#125;</span><br><span class="line"><span class="comment"># &#123;"a0":10,"a1":10,"a2":10&#125;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>三元运算符</p>
-<ul>
-<li>if 后面的条件成立，就把if前面的结果赋值给a,否则把else后面的结果赋值给a<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">10</span> <span class="keyword">if</span> <span class="number">4</span>&gt;<span class="number">3</span> <span class="keyword">else</span> <span class="number">20</span> <span class="comment">#a = 10</span></span><br><span class="line">a = <span class="number">10</span> <span class="keyword">if</span> <span class="number">4</span>&lt;<span class="number">3</span> <span class="keyword">else</span> <span class="number">20</span> <span class="comment">#a = 20</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="写爬虫的讨论"><a href="#写爬虫的讨论" class="headerlink" title="写爬虫的讨论"></a>写爬虫的讨论</h2><ul>
-<li><p>1.url</p>
-<ul>
-<li>知道url地址的规律和总的页码数：构造url地址的列表</li>
-<li>start_url</li>
-</ul>
-</li>
-<li><p>2.发送请求，获得响应</p>
-<ul>
-<li>requests</li>
-</ul>
-</li>
-<li><p>3.提取数据</p>
-<ul>
-<li>返回json字符串：json模块</li>
-<li>返回的是html字符串：lxml模块配合xpath提取数据</li>
-</ul>
-</li>
-<li><p>4.保存数据</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1719,7 +1763,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
