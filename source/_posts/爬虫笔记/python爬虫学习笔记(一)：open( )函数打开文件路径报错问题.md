@@ -4,7 +4,7 @@ date: 2018-2-18 19：01：10
 tags:
 - python学习笔记
 categories:
-- Thinking
+- python
 ---
 
 # <center>python爬虫学习笔记(一)：open（）函数打开文件路径报错<center> #

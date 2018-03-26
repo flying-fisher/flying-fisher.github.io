@@ -1,7 +1,10 @@
 ---
 title: Markdown
 date: 2018-03-26 12:24:47
-tags: Hexo
+tags: 
+- Hexo
+categories: 
+- github
 ---
 # <center>Markdown</center> #
 # <center>一级标题</center> #

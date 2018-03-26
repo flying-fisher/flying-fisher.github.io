@@ -5,7 +5,7 @@ tags:
 - python学习笔记
 
 categories:
-- Thinking
+- python
 ---
 
 # <center>浏览器的模拟--Header属性</center> 
