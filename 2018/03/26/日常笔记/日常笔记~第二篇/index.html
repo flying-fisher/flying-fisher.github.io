@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="flying-fisher">
 <meta property="og:description" content="hexo博客原文上传githubHEXO常用命令 单条指令 1.hexo new “postName” # 新建文章 2.hexo new page “pageName” # 新建页面 3.hexo clean # 清除之前 public 文件夹的内容 4.hexo generate # 生成静态页面至public目录 5.hexo deploy # 将.deploy目录部署到GitHub 6.h">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-26T08:25:55.771Z">
+<meta property="og:updated_time" content="2018-03-27T11:12:44.545Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客原文上传github">
 <meta name="twitter:description" content="hexo博客原文上传githubHEXO常用命令 单条指令 1.hexo new “postName” # 新建文章 2.hexo new page “pageName” # 新建页面 3.hexo clean # 清除之前 public 文件夹的内容 4.hexo generate # 生成静态页面至public目录 5.hexo deploy # 将.deploy目录部署到GitHub 6.h">
@@ -392,6 +392,57 @@
 </ul>
 </li>
 </ul>
+<h2 id="配置ssh-key"><a href="#配置ssh-key" class="headerlink" title="配置ssh key"></a>配置ssh key</h2><ul>
+<li><p>步骤如下：</p>
+<ul>
+<li><p>1.在任意文件夹下，右键git bash here,到.ssh文件夹下看看,清空所有文件，然后输入代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.ssh</span><br><span class="line">$ git config --global user.name &quot;yourname&quot;(双引号内为你的github名称)</span><br><span class="line">$ git config --global user.email &quot;youremail&quot;（双引号内为你的github邮箱）</span><br><span class="line">$ ssh-keygen -t rsa -C &quot;youremail&quot;（同上）</span><br><span class="line">然后出现代码之后，三个回车键（Enter）就可以创建出公钥文件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.这时候直接在’C:\Users\cui.ssh’中将出现两个文件id_rsa和id_rsa.pub，id_rsa.pub是公钥，打开复制里面的内容（可以用记事本，这里给大家推荐一个好的文档编辑器Notepad++，超级好用）</p>
+</li>
+<li>3.在github中的yourname.github.io（你的hexo的github仓库）仓库下的setting下的deploy ssh下添加key,将上述内容复制即可</li>
+<li><p>4.测试是否可以远程链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>5.出现如下信息则正常</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&apos;ve successfully authenticated, but GitHub does not</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="设置传输为SSH协议"><a href="#设置传输为SSH协议" class="headerlink" title="设置传输为SSH协议"></a>设置传输为SSH协议</h2><ul>
+<li><p>1.这个主要是避免每次进行hexo deploy或者进行git push -u origin master命令时一直提示输入用户名和密码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 进入存在.git文件的那个文件夹</span><br><span class="line">cd .deploy/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.查看当前的传输协议，如果是http（通常情况下都是HTTP格式），则更改，如果是ssh则不要后续的操作了:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">origin  https://github.com/username/REPOSITORY.git (fetch)</span><br><span class="line">origin  https://github.com/username/REPOSITORY.git (push)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3.更改http为ssh,命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote set-url origin git@github.com:username/REPOSITORY2.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>4.检查一下，是否进行了相应的更改</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line"># Verify new remote URL</span><br><span class="line"># origin  git@github.com:USERNAME/REPOSITORY2.git (fetch)</span><br><span class="line"># origin  git@github.com:USERNAME/REPOSITORY2.git (push)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>至此，大功告成，此时进行hexo deploy或者进行git push -u origin master命令时就不需要输入密码了。</li>
+</ul>
+<h2 id="hexo博客发布文章出现相关问题？"><a href="#hexo博客发布文章出现相关问题？" class="headerlink" title="hexo博客发布文章出现相关问题？"></a>hexo博客发布文章出现相关问题？</h2><ul>
+<li>1.问题如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">failed: _posts/***.md</span><br><span class="line">YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 4, column 1:</span><br><span class="line"></span><br><span class="line">ateError (D:\Blog\node_modules\js-yaml\lib\js-yaml\loader.js:162:10)</span><br><span class="line">    at throwError (D:\Blog\node_modules\js-yaml\lib\js-yaml\loader.js:168:9)</span><br><span class="line">    at readBlockMapping (D:\Blog\node_modules\js-yaml\lib\js-yaml\loader.js:1045:9)</span><br><span class="line">   </span><br><span class="line">    ......</span><br><span class="line"></span><br><span class="line">INFO  Generated: 2017/04/09/hello-world/index.html</span><br><span class="line">INFO  6 files generated in 504 ms</span><br><span class="line"></span><br><span class="line">Jhard@DESKTOP-VRQSHDK MINGW64 /d/Blog</span><br><span class="line">$ hexo d</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">warning: LF will be replaced by CRLF in 2017/04/09/hello-world/index.html.</span><br><span class="line">The file will have its original line endings in your working directory.</span><br><span class="line">.......</span><br><span class="line"></span><br><span class="line">Branch master set up to track remote branch master from https://github.com/Dream-bloom/Dream-bloom.github.io.git.</span><br><span class="line">Everything up-to-date</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>网上一般会给出三种修改方式：</p>
+<ul>
+<li>1.检查_config.yml内容，配置文件：_config.yml 中 # Site #URL 属性设置后面的：需要有空格再填写内容.看是不是这个原因</li>
+<li>2.yaml 冒号后要加空格</li>
+<li><p>3.hexo clean 然后再hexo g 最后发布下过一会儿看看 然后在你github博客仓库看看是否有对应的页面 如果有就是说仓库有 但是页面还是找不到 可能就需要hexo clean清除下本地的一些记录和静态文件 重新生成上传下.</p>
+</li>
+<li><p>总结如下：<br><br>首先,上面三种情况是需要进行核查的，否则你的好多文件都是无法上传的，这里给大家推荐一个在线检查yaml文件的链接<a href="http://www.yamllint.com/" target="_blank" rel="noopener">YAML Lint</a>,你可以直接把你的两个配置文件_config.yml（hexo文件下和themes文件下），如果都正确你就采取下面这一种方法：在/hexo/source/_posts下进行如下指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;***.md&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>创建之后，用编辑器打开，把你想要上传的文件用传统的方法复制，然后进行粘贴.其他的头标签不要动，之后把你的文件删除，对新建的这个文件保存，然后执行下面的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
+<p>此时，就应该大功告成了，应该不会再次出现错误了！如果还有问题，可以点击左侧栏我的<a href="cuijunlei2016@gmail.com">邮箱</a>，咱们进行交流探讨！谢谢</p>
 
       
     </div>
@@ -531,7 +582,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -615,7 +666,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo博客原文上传github"><span class="nav-number">1.</span> <span class="nav-text"><a href="#hexo&#x535A;&#x5BA2;&#x539F;&#x6587;&#x4E0A;&#x4F20;github" class="headerlink" title="hexo&#x535A;&#x5BA2;&#x539F;&#x6587;&#x4E0A;&#x4F20;github"></a><center>hexo&#x535A;&#x5BA2;&#x539F;&#x6587;&#x4E0A;&#x4F20;github</center></span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HEXO常用命令"><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#HEXO&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="headerlink" title="HEXO&#x5E38;&#x7528;&#x547D;&#x4EE4;"></a>HEXO&#x5E38;&#x7528;&#x547D;&#x4EE4;</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo博客原文上传github"><span class="nav-number">1.</span> <span class="nav-text"><a href="#hexo&#x535A;&#x5BA2;&#x539F;&#x6587;&#x4E0A;&#x4F20;github" class="headerlink" title="hexo&#x535A;&#x5BA2;&#x539F;&#x6587;&#x4E0A;&#x4F20;github"></a><center>hexo&#x535A;&#x5BA2;&#x539F;&#x6587;&#x4E0A;&#x4F20;github</center></span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HEXO常用命令"><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#HEXO&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="headerlink" title="HEXO&#x5E38;&#x7528;&#x547D;&#x4EE4;"></a>HEXO&#x5E38;&#x7528;&#x547D;&#x4EE4;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置ssh-key"><span class="nav-number">1.2.</span> <span class="nav-text"><a href="#&#x914D;&#x7F6E;ssh-key" class="headerlink" title="&#x914D;&#x7F6E;ssh key"></a>&#x914D;&#x7F6E;ssh key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置传输为SSH协议"><span class="nav-number">1.3.</span> <span class="nav-text"><a href="#&#x8BBE;&#x7F6E;&#x4F20;&#x8F93;&#x4E3A;SSH&#x534F;&#x8BAE;" class="headerlink" title="&#x8BBE;&#x7F6E;&#x4F20;&#x8F93;&#x4E3A;SSH&#x534F;&#x8BAE;"></a>&#x8BBE;&#x7F6E;&#x4F20;&#x8F93;&#x4E3A;SSH&#x534F;&#x8BAE;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo博客发布文章出现相关问题？"><span class="nav-number">1.4.</span> <span class="nav-text"><a href="#hexo&#x535A;&#x5BA2;&#x53D1;&#x5E03;&#x6587;&#x7AE0;&#x51FA;&#x73B0;&#x76F8;&#x5173;&#x95EE;&#x9898;&#xFF1F;" class="headerlink" title="hexo&#x535A;&#x5BA2;&#x53D1;&#x5E03;&#x6587;&#x7AE0;&#x51FA;&#x73B0;&#x76F8;&#x5173;&#x95EE;&#x9898;&#xFF1F;"></a>hexo&#x535A;&#x5BA2;&#x53D1;&#x5E03;&#x6587;&#x7AE0;&#x51FA;&#x73B0;&#x76F8;&#x5173;&#x95EE;&#x9898;&#xFF1F;</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Github上传本地文档笔记分三步： 1.git add .(后面的点代表是要上传全部文件，如果上传一个文件，可以修改成文件名字) 2.git commit -m “说明上传的理由” 3.git push -u origin master(如果前面出现错误了，输入后者代码git pull –rebase origin master，然后再重新输入前面的代码)">
+<meta name="description" content="Github上传本地文档笔记分三步： 1.git add .(后面的点代表是要上传全部文件，如果上传一个文件，可以修改成文件名字) 2.git commit -m “说明上传的理由” 3.git push -u origin master(如果前面出现错误了，输入后者代码git pull –rebase origin master，然后再重新输入前面的代码)  ubuntu上安装shadowsoc">
 <meta name="keywords" content="github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="github上传笔记">
 <meta property="og:url" content="http://yoursite.com/2018/03/26/日常笔记/github上传笔记/index.html">
 <meta property="og:site_name" content="flying-fisher">
-<meta property="og:description" content="Github上传本地文档笔记分三步： 1.git add .(后面的点代表是要上传全部文件，如果上传一个文件，可以修改成文件名字) 2.git commit -m “说明上传的理由” 3.git push -u origin master(如果前面出现错误了，输入后者代码git pull –rebase origin master，然后再重新输入前面的代码)">
+<meta property="og:description" content="Github上传本地文档笔记分三步： 1.git add .(后面的点代表是要上传全部文件，如果上传一个文件，可以修改成文件名字) 2.git commit -m “说明上传的理由” 3.git push -u origin master(如果前面出现错误了，输入后者代码git pull –rebase origin master，然后再重新输入前面的代码)  ubuntu上安装shadowsoc">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-26T08:25:42.116Z">
+<meta property="og:updated_time" content="2018-03-27T07:59:13.165Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github上传笔记">
-<meta name="twitter:description" content="Github上传本地文档笔记分三步： 1.git add .(后面的点代表是要上传全部文件，如果上传一个文件，可以修改成文件名字) 2.git commit -m “说明上传的理由” 3.git push -u origin master(如果前面出现错误了，输入后者代码git pull –rebase origin master，然后再重新输入前面的代码)">
+<meta name="twitter:description" content="Github上传本地文档笔记分三步： 1.git add .(后面的点代表是要上传全部文件，如果上传一个文件，可以修改成文件名字) 2.git commit -m “说明上传的理由” 3.git push -u origin master(如果前面出现错误了，输入后者代码git pull –rebase origin master，然后再重新输入前面的代码)  ubuntu上安装shadowsoc">
 
 
 
@@ -370,7 +370,12 @@
 <li>2.git commit -m “说明上传的理由”</li>
 <li>3.git push -u origin master(如果前面出现错误了，输入后者代码git pull –rebase origin master，然后再重新输入前面的代码)</li>
 </ul>
-
+<h1 id="ubuntu上安装shadowsocks的方法"><a href="#ubuntu上安装shadowsocks的方法" class="headerlink" title="ubuntu上安装shadowsocks的方法"></a><center>ubuntu上安装shadowsocks的方法</center></h1><ul>
+<li>在ubuntu的终端上，输入下面代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:hzwhuang/ss-qt5</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install shadowsocks-qt5</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后去软件管理器中调出shadowsocks,里面的设置进行输入即可</p>
+<h2 id="心形python代码"><a href="#心形python代码" class="headerlink" title="心形python代码"></a>心形python代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line">words = input(<span class="string">'Please input the words you want to say!:'</span>)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> words.split():</span><br><span class="line">    print(<span class="string">'\n'</span>.join([<span class="string">''</span>.join([(item[(x-y) % len(item)] <span class="keyword">if</span> ((x*<span class="number">0.05</span>)**<span class="number">2</span>+(y*<span class="number">0.1</span>)**<span class="number">2</span><span class="number">-1</span>)**<span class="number">3</span>-(x*<span class="number">0.05</span>)**<span class="number">2</span>*(y*<span class="number">0.1</span>)**<span class="number">3</span> &lt;= <span class="number">0</span> <span class="keyword">else</span> <span class="string">' '</span>) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">-30</span>, <span class="number">30</span>)]) <span class="keyword">for</span> y <span class="keyword">in</span> range(<span class="number">12</span>, <span class="number">-12</span>, <span class="number">-1</span>)]))</span><br><span class="line">    time.sleep(<span class="number">1.5</span>)</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -509,7 +514,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -593,7 +598,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github上传本地文档笔记"><span class="nav-number">1.</span> <span class="nav-text"><a href="#Github&#x4E0A;&#x4F20;&#x672C;&#x5730;&#x6587;&#x6863;&#x7B14;&#x8BB0;" class="headerlink" title="Github&#x4E0A;&#x4F20;&#x672C;&#x5730;&#x6587;&#x6863;&#x7B14;&#x8BB0;"></a><center>Github&#x4E0A;&#x4F20;&#x672C;&#x5730;&#x6587;&#x6863;&#x7B14;&#x8BB0;</center></span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分三步："><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#&#x5206;&#x4E09;&#x6B65;&#xFF1A;" class="headerlink" title="&#x5206;&#x4E09;&#x6B65;&#xFF1A;"></a>&#x5206;&#x4E09;&#x6B65;&#xFF1A;</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github上传本地文档笔记"><span class="nav-number">1.</span> <span class="nav-text"><a href="#Github&#x4E0A;&#x4F20;&#x672C;&#x5730;&#x6587;&#x6863;&#x7B14;&#x8BB0;" class="headerlink" title="Github&#x4E0A;&#x4F20;&#x672C;&#x5730;&#x6587;&#x6863;&#x7B14;&#x8BB0;"></a><center>Github&#x4E0A;&#x4F20;&#x672C;&#x5730;&#x6587;&#x6863;&#x7B14;&#x8BB0;</center></span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分三步："><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#&#x5206;&#x4E09;&#x6B65;&#xFF1A;" class="headerlink" title="&#x5206;&#x4E09;&#x6B65;&#xFF1A;"></a>&#x5206;&#x4E09;&#x6B65;&#xFF1A;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ubuntu上安装shadowsocks的方法"><span class="nav-number">2.</span> <span class="nav-text"><a href="#ubuntu&#x4E0A;&#x5B89;&#x88C5;shadowsocks&#x7684;&#x65B9;&#x6CD5;" class="headerlink" title="ubuntu&#x4E0A;&#x5B89;&#x88C5;shadowsocks&#x7684;&#x65B9;&#x6CD5;"></a><center>ubuntu&#x4E0A;&#x5B89;&#x88C5;shadowsocks&#x7684;&#x65B9;&#x6CD5;</center></span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#心形python代码"><span class="nav-number">2.1.</span> <span class="nav-text"><a href="#&#x5FC3;&#x5F62;python&#x4EE3;&#x7801;" class="headerlink" title="&#x5FC3;&#x5F62;python&#x4EE3;&#x7801;"></a>&#x5FC3;&#x5F62;python&#x4EE3;&#x7801;</span></a></li></ol></li></ol></div>
             
 
           </div>
