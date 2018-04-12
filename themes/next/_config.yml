@@ -101,6 +101,11 @@ menu:
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
   board: /board || book
+  essay: /categories/随笔
+  write: /categories/写作
+  read: /categories/阅读
+  study: /categories/学习
+  code: /categories/编程
 
 # Enable/Disable menu icons.
 menu_icons:
