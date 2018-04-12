@@ -27,6 +27,7 @@ git clone -b hexo http://github.com/username
 - 5.这样就可以把内容下载到文件夹中，新建的文件夹中就是你的旧文件中所有文件。
     - 这里需要提前安装npm,hexo模块，Node.js需要自己查询网上下载，进行安装，然后安装hexo模块，安装代码如下：
 ```
+npm install -g hexo-cli
 npm install hexo --save
 ```
 - 6.然后再就可以在新文件夹中/source/_posts新建.md文件(这里跟大家说一下，新建文件需要使用指令)，代码如下：
