@@ -3,6 +3,15 @@
   
     
     <entry>
+      <title>mongodb安装.md</title>
+      <link href="/2018/06/14/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/mongodb%E5%AE%89%E8%A3%85-md/"/>
+      <url>/2018/06/14/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/mongodb%E5%AE%89%E8%A3%85-md/</url>
+      <content type="html"><![CDATA[<p>如何解决 Mongodb后在cmd下无法启动,提示:服务名无效，发生系统错误2 系统找不到指定的文件<br>2017年08月01日 09:59:43<br>阅读数：6414<br>1.电脑是64位，操作系统win0</p><p>2.下载的是mongodb3.4版本</p><p>3.安装包直接安装， 默认安装在c:\program files\mongoDB, 手工建立目录c:\program files\mongodb\service\3.4\data\db</p><p>4.安装完成，添加路径\Mongodb\bin到系统变量，重启机器让其生效</p><p>5.执行mongod –dbpath  “c:\program files\mongodb\service\3.4\data\db”</p><p>6.执行mongod –logpath “c:\program files\mongodb\log.txt”  –dbpath “c:\program files\mongodb\service\3.4\data\db”  –install</p><p>7.执行net start mongodb</p><p>8.总是提示服务名无效，cmd用管理员身份运行，也不管用</p><p>5.进入到mogodb的绝对路径bin下，运行mongod.exe –dbpath “C:\Program Files\MongoDB\service\3.4\data\db” –logpath “C:\Program Files\MongoDB\db.log” –install –serviceName “mongo” –logappend –directoryperdb</p><p>6.再次启动net start mongo （服务名换做mogo），启动成功</p><p>————————————————————————————</p><p>7.但是不太想把mongodb安装在C盘，于是卸载了mongodb，重新安装，安装时选择了custom方式，可以自己选择安装路径，此次选择安装在D:\MongoDB下</p><p>8.安装完成后，d:\mongodb目录下直接有bin目录，不再出现service\3.4这样的分级目录了，比较奇怪，先不管他，在d:\mongodb\下手工建立目录data\db</p><p>9.cmd管理员身份运行，进入到d:\mongodb\bin下，运行以下语句</p><p>mongod.exe –dbpath “d:\MongoDB\data\db” –logpath “d:\MongoDB\data\db\db.log” –install –serviceName “mongo” –logappend –directoryperdb</p><p>10运行完成，没有任何提示，接着运行net start mongo，又出来一个新的提示：</p><p>net start mongodb发生系统错误2 系统找不到指定的文件</p><p>11.打开控制面板-管理工具-服务，打开mongodb服务，发现启动位置仍在在上次的安装路径下c:\program files\mongodb，没有改成D：盘的</p><p>12.重新运行install 语句mongod.exe –dbpath “d:\MongoDB\data\db” –logpath “d:\MongoDB\data\db\db.log” –install –serviceName “mongo” –logappend –directoryperdb<br>重启机器也不管用，还是报找不到指定文件的错误</p><p>13.cmd下用SC STOP MONGO,<br>SC DELETE MONGO<br>把服务删除，再重新运行上条install语句（一定要在绝对路径下运行）</p><p>14.net start mongo  服务启动成功</p>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
       <title>hexo_blog_github.md</title>
       <link href="/2018/03/27/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/hexo-blog-github-md/"/>
       <url>/2018/03/27/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/hexo-blog-github-md/</url>

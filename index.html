@@ -325,6 +325,152 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/14/日常笔记/mongodb安装-md/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="崔军磊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="flying-fisher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/14/日常笔记/mongodb安装-md/" itemprop="url">mongodb安装.md</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-14T20:15:24+08:00">
+                2018-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>如何解决 Mongodb后在cmd下无法启动,提示:服务名无效，发生系统错误2 系统找不到指定的文件<br>2017年08月01日 09:59:43<br>阅读数：6414<br>1.电脑是64位，操作系统win0</p>
+<p>2.下载的是mongodb3.4版本</p>
+<p>3.安装包直接安装， 默认安装在c:\program files\mongoDB, 手工建立目录c:\program files\mongodb\service\3.4\data\db</p>
+<p>4.安装完成，添加路径\Mongodb\bin到系统变量，重启机器让其生效</p>
+<p>5.执行mongod –dbpath  “c:\program files\mongodb\service\3.4\data\db”</p>
+<p>6.执行mongod –logpath “c:\program files\mongodb\log.txt”  –dbpath “c:\program files\mongodb\service\3.4\data\db”  –install</p>
+<p>7.执行net start mongodb</p>
+<p>8.总是提示服务名无效，cmd用管理员身份运行，也不管用</p>
+<p>5.进入到mogodb的绝对路径bin下，运行mongod.exe –dbpath “C:\Program Files\MongoDB\service\3.4\data\db” –logpath “C:\Program Files\MongoDB\db.log” –install –serviceName “mongo” –logappend –directoryperdb</p>
+<p>6.再次启动net start mongo （服务名换做mogo），启动成功</p>
+<p>————————————————————————————</p>
+<p>7.但是不太想把mongodb安装在C盘，于是卸载了mongodb，重新安装，安装时选择了custom方式，可以自己选择安装路径，此次选择安装在D:\MongoDB下</p>
+<p>8.安装完成后，d:\mongodb目录下直接有bin目录，不再出现service\3.4这样的分级目录了，比较奇怪，先不管他，在d:\mongodb\下手工建立目录data\db</p>
+<p>9.cmd管理员身份运行，进入到d:\mongodb\bin下，运行以下语句</p>
+<p>mongod.exe –dbpath “d:\MongoDB\data\db” –logpath “d:\MongoDB\data\db\db.log” –install –serviceName “mongo” –logappend –directoryperdb</p>
+<p>10运行完成，没有任何提示，接着运行net start mongo，又出来一个新的提示：</p>
+<p>net start mongodb发生系统错误2 系统找不到指定的文件</p>
+<p>11.打开控制面板-管理工具-服务，打开mongodb服务，发现启动位置仍在在上次的安装路径下c:\program files\mongodb，没有改成D：盘的</p>
+<p>12.重新运行install 语句mongod.exe –dbpath “d:\MongoDB\data\db” –logpath “d:\MongoDB\data\db\db.log” –install –serviceName “mongo” –logappend –directoryperdb<br>重启机器也不管用，还是报找不到指定文件的错误</p>
+<p>13.cmd下用SC STOP MONGO,<br>SC DELETE MONGO<br>把服务删除，再重新运行上条install语句（一定要在绝对路径下运行）</p>
+<p>14.net start mongo  服务启动成功</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+    
+    
+    <div>
+      
+    </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/27/日常笔记/hexo-blog-github-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1872,254 +2018,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/python爬虫学习/第一部分/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="崔军磊">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="flying-fisher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/26/python爬虫学习/第一部分/" itemprop="url">第一部分：爬虫概念，工具和HTTP</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T10:33:51+08:00">
-                2018-03-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="爬虫概念，工具和HTTP"><a href="#爬虫概念，工具和HTTP" class="headerlink" title="爬虫概念，工具和HTTP"></a>爬虫概念，工具和HTTP</h1><div><div class="fold_hider"><div class="close hider_title">点击显/隐内容</div></div><div class="fold">
-<h2 id="1-什么是爬虫"><a href="#1-什么是爬虫" class="headerlink" title="1.什么是爬虫"></a>1.什么是爬虫</h2><ul>
-<li>爬虫就是’模拟客户端（浏览器）发送网络请求’，获取响应，按照规则提取数据的程序</li>
-<li>‘模拟客户端（浏览器）发送网络请求’: 照着浏览器发送一模一样的请求获取和浏览器一模一样的数据</li>
-</ul>
-<h2 id="2-爬虫的数据去哪了"><a href="#2-爬虫的数据去哪了" class="headerlink" title="2.爬虫的数据去哪了"></a>2.爬虫的数据去哪了</h2><ul>
-<li>呈现出来：展现在网页上，或者是展现在app上</li>
-<li>进行分析：从数据中寻找一些规律</li>
-</ul>
-<h2 id="3-需要的软件和环境"><a href="#3-需要的软件和环境" class="headerlink" title="3.需要的软件和环境"></a>3.需要的软件和环境</h2><ul>
-<li>python3 </li>
-<li>基础语法（字符串，列表，字典，判断和循环）</li>
-<li>函数（函数的创建和调用）</li>
-<li>面向对象（如何创建一个类，如何使用这个类）</li>
-<li>工具IDE ：pycharm<ul>
-<li>pycharm编辑器</li>
-</ul>
-</li>
-<li>chrome浏览器<ul>
-<li>分析网络请求用的</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-浏览器的请求"><a href="#4-浏览器的请求" class="headerlink" title="4.浏览器的请求"></a>4.浏览器的请求</h2><ul>
-<li><p>url</p>
-<ul>
-<li>在chrome中点击检查，点到network，</li>
-<li>url = 请求的协议 + 网站的域名 + 资源的路径 + 参数</li>
-</ul>
-</li>
-<li><p>浏览器请求url地址</p>
-<ul>
-<li>当前url对应的响应 + js + css + 图片 —&gt;&gt;elements中的内容</li>
-</ul>
-</li>
-<li>爬虫请求url地址<ul>
-<li>当前url对应的响应</li>
-</ul>
-</li>
-<li><p>elements的内容和爬虫获取到的url地址的响应不同，爬虫中需要以当前url地址对应的响应为准提取数据</p>
-</li>
-<li><p>当前url地址对应的响应在哪里</p>
-<ul>
-<li>从network中找到当前的url地址，点击reponse</li>
-<li>在页面上右键显示页面源码</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-认识HTTP、HTTPS"><a href="#5-认识HTTP、HTTPS" class="headerlink" title="5.认识HTTP、HTTPS"></a>5.认识HTTP、HTTPS</h2><ul>
-<li>HTTP：超文本传输协议<ul>
-<li>以明文的形式传输</li>
-<li>效率更高，不安全</li>
-</ul>
-</li>
-<li><p>HTTPS:HTTP + SSL（安全套接字层）</p>
-<ul>
-<li>传输之前数据先加密，之后解密获取内容</li>
-<li>效率较低，安全</li>
-</ul>
-</li>
-<li><p>get请求和post请求的区别</p>
-<ul>
-<li>get请求没有请求体，post有，get请求把数据放到url地址中</li>
-<li>post请求常用于登录注册，</li>
-<li>post请求携带的数据量比get请求大，多，常用于传输大文本的时候</li>
-</ul>
-</li>
-<li><p>HTTP协议请求</p>
-<ul>
-<li>1.请求行</li>
-<li>2.请求头<ul>
-<li>User-Agent:用户代理：对方服务器能够通过user-agent知道当前请求对方资源的是什么浏览器</li>
-<li>如果我们需要模拟手机版的浏览器发送请求，就需要把user-agent改成手机版的</li>
-<li>Cookie：用来存储用户信息的，每次请求会被携带上发送给对方的浏览器<ul>
-<li>要获取登录后才能访问的页面</li>
-<li>对方的服务器会通过cookie来判断我们是一个爬虫</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>3.请求体<ul>
-<li>携带数据的</li>
-<li>get请求没有请求体</li>
-<li>post请求有请求体</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>HTTP协议之响应<ul>
-<li>1.响应头<ul>
-<li>Set-Cookie：对方服务器通过该字段设置cookie到本地</li>
-</ul>
-</li>
-<li>2.响应体<ul>
-<li>url地址对应的响应</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-</div></div>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-    
-    
-    <div>
-      
-    </div>
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2174,7 +2072,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
