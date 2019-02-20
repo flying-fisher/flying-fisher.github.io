@@ -84,7 +84,7 @@
 <meta name="description" content="技术和生活，建立你我他">
 <meta property="og:type" content="website">
 <meta property="og:title" content="flying-fisher">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://flying-fisher.github.io/index.html">
 <meta property="og:site_name" content="flying-fisher">
 <meta property="og:description" content="技术和生活，建立你我他">
 <meta property="og:locale" content="zh-Hans">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://flying-fisher.github.io/"/>
 
 
 
@@ -325,7 +325,215 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/14/日常笔记/mongodb安装-md/">
+    <link itemprop="mainEntityOfPage" href="http://flying-fisher.github.io/2019/02/20/Python/Python文件和目录操作方法大全/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="崔军磊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="flying-fisher">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/20/Python/Python文件和目录操作方法大全/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T20:51:31+08:00">
+                2019-02-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="转载-python文件和目录操作方法大全（含更改文件夹下所有文件名称的实例）"><a href="#转载-python文件和目录操作方法大全（含更改文件夹下所有文件名称的实例）" class="headerlink" title="[转载]python文件和目录操作方法大全（含更改文件夹下所有文件名称的实例）"></a>[转载]python文件和目录操作方法大全（含更改文件夹下所有文件名称的实例）</h1><h2 id="一、Python中对文件、文件夹操作时经常用到的os模块和shutil模块常用方法。"><a href="#一、Python中对文件、文件夹操作时经常用到的os模块和shutil模块常用方法。" class="headerlink" title="一、Python中对文件、文件夹操作时经常用到的os模块和shutil模块常用方法。"></a>一、Python中对文件、文件夹操作时经常用到的os模块和shutil模块常用方法。</h2><p>1.得到当前工作目录，即当前Python脚本工作的目录路径: os.getcwd()</p>
+<p>2.返回指定目录下的所有文件和目录名:os.listdir()</p>
+<p>3.函数用来删除一个文件:os.remove()</p>
+<p>4.删除多个目录：os.removedirs（r“c：\python”）</p>
+<p>5.检验给出的路径是否是一个文件：os.path.isfile()</p>
+<p>6.检验给出的路径是否是一个目录：os.path.isdir()</p>
+<p>7.判断是否是绝对路径：os.path.isabs()</p>
+<p>8.检验给出的路径是否真地存:os.path.exists()</p>
+<p>9.返回一个路径的目录名和文件名:os.path.split()     eg os.path.split(‘/home/swaroop/byte/code/poem.txt’) 结果：(‘/home/swaroop/byte/code’, ‘poem.txt’) </p>
+<p>10.分离扩展名：os.path.splitext()</p>
+<p>11.获取路径名：os.path.dirname()</p>
+<p>12.获取文件名：os.path.basename()</p>
+<p>13.运行shell命令: os.system()</p>
+<p>14.读取和设置环境变量:os.getenv() 与os.putenv()</p>
+<p>15.给出当前平台使用的行终止符:os.linesep    Windows使用’\r\n’，Linux使用’\n’而Mac使用’\r’</p>
+<p>16.指示你正在使用的平台：os.name       对于Windows，它是’nt’，而对于Linux/Unix用户，它是’posix’</p>
+<p>17.重命名：os.rename（old， new）</p>
+<p>18.创建多级目录：os.makedirs（r“c：\python\test”）</p>
+<p>19.创建单个目录：os.mkdir（“test”）</p>
+<p>20.获取文件属性：os.stat（file）</p>
+<p>21.修改文件权限与时间戳：os.chmod（file）</p>
+<p>22.终止当前进程：os.exit（）</p>
+<p>23.获取文件大小：os.path.getsize（filename）</p>
+<h2 id="二、文件操作方法大全："><a href="#二、文件操作方法大全：" class="headerlink" title="二、文件操作方法大全："></a>二、文件操作方法大全：</h2><p>1.os.mknod(“test.txt”)             #创建空文件</p>
+<p>2.fp = open(“test.txt”,w)          #直接打开一个文件，如果文件不存在则创建文件</p>
+<p>3.关于open 模式：</p>
+<p>w：以写方式打开，</p>
+<p>a：以追加模式打开 (从 EOF 开始, 必要时创建新文件)  </p>
+<p>r+：以读写模式打开  </p>
+<p>w+：以读写模式打开 (参见 w )  </p>
+<p>a+：以读写模式打开 (参见 a )  </p>
+<p>rb：以二进制读模式打开  </p>
+<p>wb：以二进制写模式打开 (参见 w )  </p>
+<p>ab：以二进制追加模式打开 (参见 a )  </p>
+<p>rb+：以二进制读写模式打开 (参见 r+ )  </p>
+<p>wb+：以二进制读写模式打开 (参见 w+ )  </p>
+<p>ab+：以二进制读写模式打开 (参见 a+ )  </p>
+<p>fp.read([size])                     #size为读取的长度，以byte为单位</p>
+<p>fp.readline([size])                 #读一行，如果定义了size，有可能返回的只是一行的一部分</p>
+<p>fp.readlines([size])                #把文件每一行作为一个list的一个成员，并返回这个list。其实它的内部是通过循环调用readline()来实现的。如果提供size参数，size是表示读取内容的总长，也就是说可能只读到文件的一部分。</p>
+<p>fp.write(str)                       #把str写到文件中，write()并不会在str后加上一个换行符</p>
+<p>fp.writelines(seq)                  #把seq的内容全部写到文件中(多行一次性写入)。这个函数也只是忠实地写入，不会在每行后面加上任何东西。</p>
+<p>fp.close()                          #关闭文件。python会在一个文件不用后自动关闭文件，不过这一功能没有保证，最好还是养成自己关闭的习惯。  如果一个文件在关闭后还对其进行操作会产生ValueError</p>
+<p>fp.flush()                          #把缓冲区的内容写入硬盘</p>
+<p>fp.fileno()                         #返回一个长整型的”文件标“</p>
+<p>fp.isatty()                         #文件是否是一个终端设备文件（unix系统中的）</p>
+<p>fp.tell()                           #返回文件操作标记的当前位置，以文件的开头为原点</p>
+<p>fp.next()                           #返回下一行，并将文件操作标记位移到下一行。把一个file用于for … in file这样的语句时，就是调用next()函数来实现遍历的。</p>
+<p>fp.seek(offset[,whence])            #将文件打操作标记移到offset的位置。这个offset一般是相对于文件的开头来计算的，一般为正数。但如果提供了whence参数就不一定了，whence可以为0表示从头开始计算，1表示以当前位置为原点计算。2表示以文件末尾为原点进行计算。需要注意，如果文件以a或a+的模式打开，每次进行写操作时，文件操作标记会自动返回到文件末尾。</p>
+<p>fp.truncate([size])                 #把文件裁成规定的大小，默认的是裁到当前文件操作标记的位置。如果size比文件的大小还要大，依据系统的不同可能是不改变文件，也可能是用0把文件补到相应的大小，也可能是以一些随机的内容加上去。</p>
+<h2 id="三、目录操作方法大全"><a href="#三、目录操作方法大全" class="headerlink" title="三、目录操作方法大全"></a>三、目录操作方法大全</h2><p>1.创建目录</p>
+<p>os.mkdir(“file”)      </p>
+<p>2.复制文件：</p>
+<p>shutil.copyfile(“oldfile”,”newfile”)        #oldfile和newfile都只能是文件</p>
+<p>shutil.copy(“oldfile”,”newfile”)            #oldfile只能是文件夹，newfile可以是文件，也可以是目标目录</p>
+<p>3.复制文件夹：</p>
+<p>4.shutil.copytree(“olddir”,”newdir”)        #olddir和newdir都只能是目录，且newdir必须不存在</p>
+<p>5.重命名文件（目录）</p>
+<p>os.rename(“oldname”,”newname”)              #文件或目录都是使用这条命令</p>
+<p>6.移动文件（目录）</p>
+<p>shutil.move(“oldpos”,”newpos”)   </p>
+<p>7.删除文件</p>
+<p>os.remove(“file”)</p>
+<p>8.删除目录</p>
+<p>os.rmdir(“dir”)                             #只能删除空目录</p>
+<p>shutil.rmtree(“dir”)                        #空目录、有内容的目录都可以删</p>
+<p>9.转换目录</p>
+<p>os.chdir(“path”)                            #换路径</p>
+<p>四、文件综合操作实例</p>
+<p>将文件夹下所有图片名称加上’_fc’</p>
+<p>python代码:<br>‘’’python </p>
+<h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="-- coding:utf-8 --"></a>-<em>- coding:utf-8 -</em>-</h1><p>import re<br>import os<br>import time  </p>
+<p>#str.split(string)分割字符串  </p>
+<p>#’连接符’.join(list) 将列表组成字符串<br>def change_name(path):<br>    global i<br>    if not os.path.isdir(path) and not os.path.isfile(path):<br>        return False<br>    if os.path.isfile(path):<br>        file_path = os.path.split(path) #分割出目录与文件<br>        lists = file_path[1].split(‘.’) #分割出文件与文件扩展名<br>        file_ext = lists[-1] #取出后缀名(列表切片操作)<br>        img_ext = [‘bmp’,’jpeg’,’gif’,’psd’,’png’,’jpg’]<br>        if file_ext in img_ext:<br>            os.rename(path,file_path[0]+’/‘+lists[0]+’_fc.’+file_ext)<br>            i+=1 #注意这里的i是一个陷阱  </p>
+<pre><code>    #或者  
+    #img_ext = &apos;bmp|jpeg|gif|psd|png|jpg&apos;  
+    #if file_ext in img_ext:  
+    #    print(&apos;ok---&apos;+file_ext)  
+elif os.path.isdir(path):  
+    for x in os.listdir(path):  
+        change_name(os.path.join(path,x)) #os.path.join()在路径处理上很有用  
+</code></pre><p>img_dir = ‘D:\xx\xx\images’  </p>
+<p>img_dir = img_dir.replace(‘\‘,’/‘)<br>start = time.time()<br>i = 0<br>change_name(img_dir)<br>c = time.time() - start<br>print(‘程序运行耗时:%0.2f’%(c))<br>print(‘总共处理了 %s 张图片’%(i))<br>‘’’</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+    
+    
+    <div>
+      
+    </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://flying-fisher.github.io/2018/06/14/日常笔记/mongodb安装-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="崔军磊">
@@ -471,7 +679,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/27/日常笔记/hexo-blog-github-md/">
+    <link itemprop="mainEntityOfPage" href="http://flying-fisher.github.io/2018/03/27/日常笔记/hexo-blog-github-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="崔军磊">
@@ -623,7 +831,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/爬虫笔记/python-数据结构/">
+    <link itemprop="mainEntityOfPage" href="http://flying-fisher.github.io/2018/03/26/爬虫笔记/python-数据结构/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="崔军磊">
@@ -788,7 +996,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/初步认识hexo/Markdown/">
+    <link itemprop="mainEntityOfPage" href="http://flying-fisher.github.io/2018/03/26/初步认识hexo/Markdown/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="崔军磊">
@@ -962,7 +1170,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/日常笔记/日常笔记~第二篇/">
+    <link itemprop="mainEntityOfPage" href="http://flying-fisher.github.io/2018/03/26/日常笔记/日常笔记~第二篇/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="崔军磊">
@@ -1187,7 +1395,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/爬虫笔记/python爬虫笔记（二）：利用模拟浏览器爬取网页/">
+    <link itemprop="mainEntityOfPage" href="http://flying-fisher.github.io/2018/03/26/爬虫笔记/python爬虫笔记（二）：利用模拟浏览器爬取网页/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="崔军磊">
@@ -1341,7 +1549,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/爬虫笔记/python爬虫学习笔记(一)：open( )函数打开文件路径报错问题/">
+    <link itemprop="mainEntityOfPage" href="http://flying-fisher.github.io/2018/03/26/爬虫笔记/python爬虫学习笔记(一)：open( )函数打开文件路径报错问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="崔军磊">
@@ -1512,7 +1720,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/日常笔记/github上传笔记/">
+    <link itemprop="mainEntityOfPage" href="http://flying-fisher.github.io/2018/03/26/日常笔记/github上传笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="崔军磊">
@@ -1669,7 +1877,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/初步认识hexo/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://flying-fisher.github.io/2018/03/26/初步认识hexo/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="崔军磊">
@@ -1812,212 +2020,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/python爬虫学习/第二部分/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="崔军磊">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="flying-fisher">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/26/python爬虫学习/第二部分/" itemprop="url">第二部分：requests模块学习</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T10:33:51+08:00">
-                2018-03-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="requests模块的学习"><a href="#requests模块的学习" class="headerlink" title="requests模块的学习"></a>requests模块的学习</h1><h2 id="使用事前"><a href="#使用事前" class="headerlink" title="使用事前"></a>使用事前</h2><pre><code>-pip install requests
-</code></pre><h2 id="发送get-post请求，获取响应"><a href="#发送get-post请求，获取响应" class="headerlink" title="发送get,post请求，获取响应"></a>发送get,post请求，获取响应</h2><ul>
-<li>response = requests.get(url) #发送get请求，请求url地址对应的响应</li>
-<li>response = requests.post(url,data={请求体的字典}) #发送post请求</li>
-</ul>
-<h3 id="response-的方法"><a href="#response-的方法" class="headerlink" title="response 的方法"></a>response 的方法</h3><ul>
-<li>response.text<ul>
-<li>容易出现乱码，修改方式是前面加上response.encoding = ‘utf-8’</li>
-</ul>
-</li>
-<li>response.content.decode()<ul>
-<li>把响应的二进制字节流转化为str类型</li>
-</ul>
-</li>
-<li>response.request.url  #发送请求的url地址</li>
-<li>response.url  #response响应的url地址</li>
-<li>response.request.headers  # 请求头</li>
-<li>response.headers  #响应请求</li>
-</ul>
-<h3 id="获取网页源码的正确打开方式-通过下面三种方式一定可以获得相应的网页请求"><a href="#获取网页源码的正确打开方式-通过下面三种方式一定可以获得相应的网页请求" class="headerlink" title="获取网页源码的正确打开方式(通过下面三种方式一定可以获得相应的网页请求)"></a>获取网页源码的正确打开方式(通过下面三种方式一定可以获得相应的网页请求)</h3><ul>
-<li>1.response.content.decode()</li>
-<li>2.response.content.decode(‘gbk’)</li>
-<li>3.response.text</li>
-</ul>
-<h2 id="发送带Header的请求-字典形式"><a href="#发送带Header的请求-字典形式" class="headerlink" title="发送带Header的请求(字典形式)"></a>发送带Header的请求(字典形式)</h2><ul>
-<li>为了模拟浏览器，获取和浏览器一模一样的内容</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">headers = &#123;<span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'</span> &#125;</span><br><span class="line"></span><br><span class="line">response = requests.get(url,headers = headers)</span><br></pre></td></tr></table></figure>
-<h2 id="使用超时参数"><a href="#使用超时参数" class="headerlink" title="使用超时参数"></a>使用超时参数</h2><ul>
-<li>response = requests.get(url,headers = headers,timeout=3)  #3秒内必须返回响应，否则会报错</li>
-</ul>
-<h3 id="retrying模块学习"><a href="#retrying模块学习" class="headerlink" title="retrying模块学习"></a>retrying模块学习</h3><ul>
-<li>pip install retrying</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> retrying <span class="keyword">import</span> retry</span><br><span class="line"></span><br><span class="line"><span class="meta">@retry(stop_max_attempt_number = 3) #让被装饰的函数反复执行三次，三次全部报错才会报错，中间又一次正常，就可以正常进行</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func1"</span>)</span><br><span class="line">    <span class="keyword">raise</span> ValueError(<span class="string">"this is test error"</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="处理cookie相关的请求"><a href="#处理cookie相关的请求" class="headerlink" title="处理cookie相关的请求"></a>处理cookie相关的请求</h2><ul>
-<li>人人网{“email”:”mr_mao_hacker@163.com”,<br>  “password”:”alarmchime”}</li>
-<li><p>直接携带cookie请求url地址</p>
-<ul>
-<li><p>1.cookie放在headers中</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">headers = &#123;<span class="string">"User-Agent"</span>:<span class="string">"......"</span>,<span class="string">"Cookie"</span>:<span class="string">"cookie 字符串"</span>&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>2.cookie字典传给cookies参数</p>
-<ul>
-<li>requests.get(url,cookie=cookie_dict)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>先发送post请求，获取cookie，带上cookie请求登录后的页面<ul>
-<li>1.session = requests.session() #session具有的方法和requests一样</li>
-<li>2.session.post(url,data,headers) # 服务器设置在本地的cookie会保存在session</li>
-<li>3.session.get(url) # 会带上之前保存在session中的cookie，能够请求成功</li>
-</ul>
-</li>
-</ul>
-<h1 id="字典推导式"><a href="#字典推导式" class="headerlink" title="字典推导式"></a>字典推导式</h1><ul>
-<li>可以把字符串转化为字典形式  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cookie = <span class="string">"BIDUPSID=D7F0CDF633A0261AC63033983555E4B8; PSTM=1502592197; BAIDUID=688900B6A843179BB4682296FC040DCC:FG=1; BDUSS=B3azBtSjg4VjNHajZsc3h6R01mfmwyaTZ2Ty1HaWhWWS1Ba1lnRGNGZjhsTTlaSUFBQUFBJCQAAAAAAAAAAAEAAABReqJYt9bJ7cr1MjAxNgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwHqFn8B6hZej; H_PS_PSSID=1439_21109_17001_22159; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BD_CK_SAM=1; PSINO=2; BDRCVFR[feWj1Vr5u3D]=mk3SLVN4HKm; BD_UPN=14314654; WWW_ST=1521449610205"</span></span><br><span class="line">cookie_dict = &#123;i.split(<span class="string">"="</span>)[<span class="number">0</span>]:i.split(<span class="string">"="</span>)[<span class="number">-1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> cookie.split(<span class="string">"; "</span>)&#125;</span><br><span class="line">print(cookie_dict)</span><br><span class="line">response = requests.get(url,headers = headers,cookies=cookie_dict)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"renren2.html"</span>,<span class="string">"w"</span>,encoding = <span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(response.content.decode())</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-    
-    
-    <div>
-      
-    </div>
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2072,7 +2074,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2161,7 +2163,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+<div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

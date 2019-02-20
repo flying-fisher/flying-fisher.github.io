@@ -7,7 +7,7 @@
 	
 	$.fn.snow = function(options){
 	
-			var $flake 			= $('<div id="snowbox">').css({'position': 'absolute', 'top': '-50px'}).html('&#10052;'),
+			var $flake 			= $('<div id="snowbox" />').css({'position': 'absolute', 'top': '-50px'}).html('&#10052;'),
 				documentHeight 	= $(document).height(),
 				documentWidth	= $(document).width(),
 				defaults		= {
@@ -43,4 +43,4 @@
 	
 	};
 	
-})(jQuery);</div>
+})(jQuery);
