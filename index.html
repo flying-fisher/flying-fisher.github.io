@@ -344,7 +344,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/20/Python/Python文件和目录操作方法大全/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2019/02/20/Python/Python文件和目录操作方法大全/" itemprop="url">python文件和目录操作方法</a></h1>
         
 
         <div class="post-meta">
@@ -356,7 +356,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T20:51:31+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T00:00:00+08:00">
                 2019-02-20
               </time>
             
@@ -366,6 +366,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -466,10 +488,10 @@
 <p>os.chdir(“path”)                            #换路径</p>
 <p>四、文件综合操作实例</p>
 <p>将文件夹下所有图片名称加上’_fc’</p>
-<p>python代码:<br>‘’’python </p>
+<p>python代码:</p>
 <h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="-- coding:utf-8 --"></a>-<em>- coding:utf-8 -</em>-</h1><p>import re<br>import os<br>import time  </p>
-<p>#str.split(string)分割字符串  </p>
-<p>#’连接符’.join(list) 将列表组成字符串<br>def change_name(path):<br>    global i<br>    if not os.path.isdir(path) and not os.path.isfile(path):<br>        return False<br>    if os.path.isfile(path):<br>        file_path = os.path.split(path) #分割出目录与文件<br>        lists = file_path[1].split(‘.’) #分割出文件与文件扩展名<br>        file_ext = lists[-1] #取出后缀名(列表切片操作)<br>        img_ext = [‘bmp’,’jpeg’,’gif’,’psd’,’png’,’jpg’]<br>        if file_ext in img_ext:<br>            os.rename(path,file_path[0]+’/‘+lists[0]+’_fc.’+file_ext)<br>            i+=1 #注意这里的i是一个陷阱  </p>
+<p> #str.split(string)分割字符串  </p>
+<p> #’连接符’.join(list) 将列表组成字符串<br>def change_name(path):<br>    global i<br>    if not os.path.isdir(path) and not os.path.isfile(path):<br>        return False<br>    if os.path.isfile(path):<br>        file_path = os.path.split(path) #分割出目录与文件<br>        lists = file_path[1].split(‘.’) #分割出文件与文件扩展名<br>        file_ext = lists[-1] #取出后缀名(列表切片操作)<br>        img_ext = [‘bmp’,’jpeg’,’gif’,’psd’,’png’,’jpg’]<br>        if file_ext in img_ext:<br>            os.rename(path,file_path[0]+’/‘+lists[0]+’_fc.’+file_ext)<br>            i+=1 #注意这里的i是一个陷阱  </p>
 <pre><code>    #或者  
     #img_ext = &apos;bmp|jpeg|gif|psd|png|jpg&apos;  
     #if file_ext in img_ext:  
@@ -2096,7 +2118,7 @@ elif os.path.isdir(path):
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
